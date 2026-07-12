@@ -9,38 +9,38 @@
    ============================================ */
 var CONFIG = {
     // Wedding date & time (used by countdown, ticket canvas, calendar links)
-    weddingDate:      new Date('2026-12-18T18:00:00'),
+    weddingDate:      new Date('2026-11-28T15:45:00'),
 
     // RSVP confirmation deadline (displayed in RSVP section)
-    rsvpDeadline:     new Date('2026-10-01'),
-    rsvpDeadlineText: '1° de Octubre',
+    rsvpDeadline:     new Date('2026-11-28T15:45:00'),
+    rsvpDeadlineText: '28 de Noviembre',
 
     // Couple names
-    coupleNames:   'Karla & Jose',
-    coupleTitle:   'Boda de Karla & Jose',
+    coupleNames:   'Antonio & Belsy',
+    coupleTitle:   'Boda de Antonio & Belsy',
 
     // Ceremony
-    ceremonyTitle:    'Boda Karla & Jose - Ceremonia',
-    ceremonyAddress:  'Parroquia Nuestra Señora de Altagracia, esquina con, De La Mancha, Real del Monte, Altagracia, 45130 Zapopan, Jal.',
-    ceremonyShort:    'Parroquia Nuestra Señora de Altagracia, Zapopan, Jal.',
-    ceremonyStart:    '20261218T180000',
-    ceremonyEnd:      '20261218T190000',
+    ceremonyTitle:    'Boda Antonio & Belsy - Ceremonia',
+    ceremonyAddress:  'Cra. 53 # 48 - 04, Nte. Centro Historico, Barranquilla, Atlántico',
+    ceremonyShort:    'Parroquia Sagrado Corazón de Jesús',
+    ceremonyStart:    '20261128T154500',
+    ceremonyEnd:      '20261128T173000',
 
     // Reception
-    receptionTitle:   'Boda Karla & Jose - Recepción',
-    receptionAddress: 'Jardin de Eventos Andira, Av. de las Calandrias 32, Villas de La Loma, 45134 Nuevo México, Jal.',
-    receptionShort:   'Jardin de Eventos Andira, Nuevo México, Jal.',
-    receptionStart:   '20261218T200000',
-    receptionEnd:     '20261219T020000',
+    receptionTitle:   'Boda Antonio & Belsy - Recepción',
+    receptionAddress: 'Cl. 44 #44-66, Nte. Centro Historico, Barranquilla, Atlántico',
+    receptionShort:   'Hotel Genova',
+    receptionStart:   '20261128T173000',
+    receptionEnd:     '20261128T230000',
 
     // Full-day calendar event (used in the RSVP confirmation modal)
-    calendarTitle:    'Boda Karla & Jose',
+    calendarTitle:    'Boda Antonio & Belsy',
     calendarAddress:  'Ceremonia: Parroquia Nuestra Señora de Altagracia, Zapopan, Jal. | Recepción: Jardin de Eventos Andira, Nuevo México, Jal.',
     calendarStart:    '20261218T180000',
     calendarEnd:      '20261219T020000',
 
     // Ticket canvas display strings
-    ticketDateText:   '18 de diciembre, 2026',
+    ticketDateText:   '28 de Noviembre, 2026',
 
     // Max file size for photo uploads (bytes)
     maxUploadBytes:   5 * 1024 * 1024,
@@ -1058,8 +1058,8 @@ function generateRsvpTicketPng(opts) {
 
     // Use the resolved DOM URL first to avoid path issues.
     var logoPromise = loadImageForCanvasUntainted(getTicketLogoUrl())
-        .catch(function () { return loadImageForCanvasUntainted('img/logo2.webp'); })
-        .catch(function () { return loadImageForCanvasUntainted('./img/logo2.webp'); })
+        .catch(function () { return loadImageForCanvasUntainted('images/logblanco.png'); })
+        .catch(function () { return loadImageForCanvasUntainted('./images/logblanco.png'); })
         .catch(function () { return null; });
     var qrPromise = qrDataUrl
         ? loadImageForCanvasUntainted(qrDataUrl).catch(function () { return null; })
@@ -1434,24 +1434,24 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
 // Playlist - add your MP3 files here
 const playlist = [
     {
-        title:  "How Deep Is Your Love",
-        artist: "Bee Gees",
-        src:    "mp3/How Deep Is Your Love - Bee Gees.mp3"
+        title:  "Desde Que te Tengo",
+        artist: "Carín León",
+        src:    "mp3/Carín León - Desde Que te Tengo.mp3"
     },
     {
-        title: "Te Amo y Más",
-        artist: "Gustavo Santaolalla, Paul Williams, Diego Luna",
-        src:   "mp3/Te Amo y Más - Gustavo Santaolalla, Paul Williams, Diego Luna.mp3"
+        title: "Amor a la Antigua",
+        artist: "Mia Salinas",
+        src:   "mp3/Mia Salinas - Amor a la Antigua.mp3"
     },
     {
-        title:  "Patadas de Ahogado",
-        artist: "LATIN MAFIA",
-        src:    "mp3/Patadas de Ahogado - LATIN MAFIA.mp3"
+        title:  "SI ES AMOR",
+        artist: "Danny Ocean x Beele",
+        src:    "mp3/Danny Ocean x Beele - SI ES AMOR (Visualizer) Salsalizer.mp3"
     },
     {
-        title: "Love never felt so good",
-        artist: "Michael Jackson",
-        src:   "mp3/Love never felt so good - Michael Jackson.mp3"
+        title: "Perfect",
+        artist: "Ed Sheeran",
+        src:   "mp3/Ed Sheeran - Perfect.mp3"
     },
     {
         title:  "Del Altar a la Tumba",

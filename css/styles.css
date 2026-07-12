@@ -77,7 +77,7 @@ h6 {
 }
 
 a {
-    color: #2E8B57;
+    color: #657059;
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -106,7 +106,8 @@ p {
 }
 
 .navigation.fixed {
-    background-color: rgba(15, 59, 46, 0.88);
+    background-color: #657059;
+    opacity: 0.6;
     z-index: 1100;
     width: 100%;
 }
@@ -166,13 +167,13 @@ header.scrolled::after {
     line-height: 0;
 }
 
-.logo img {
-    height: 40px;
+.logo img { /* Logo blanco de la parte izquieda */
+    height: 60px;
     display: block;
 }
 
 .navigation.fixed .logo {
-    font-size: 26px;
+    font-size: 16px;
 }
 
 .logo:hover {
@@ -298,7 +299,7 @@ header nav ul.member-actions li:first-child a:hover:after {
 .btn-white:hover {
     background-color: #d4af37;
     border-color: #d4af37;
-    color: #0f3b2e;
+    color: #657059;
 }
 
 /* Hamburger Menu */
@@ -378,16 +379,46 @@ header nav ul.member-actions li:first-child a:hover:after {
 /* ============================================
    Envelope Intro Overlay
    ============================================ */
+#intro-overlay{
+    position: fixed;
+    inset: 0;
 
-#intro-overlay {
-    transition: opacity 1.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.8s;
-    background-color: #f9f7f0;
-    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    overflow: hidden;
+
+    transition: opacity 1.8s cubic-bezier(.4,0,.2,1), visibility 1.8s;
+
+    /* AGREGAR */
+    isolation: isolate;
 }
+
+/* AGREGAR */
+#intro-overlay::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background-image:url("../images/fondo2.png"); /* Cambia la ruta si es necesario */
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    z-index:-1;
+}
+
+/* Ya lo tienes */
+#intro-overlay>*{
+    position:relative;
+    z-index:1;
+}
+
 
 .envelope-wrapper {
     perspective: 2500px;
-    filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 40px 80px rgba(255, 255, 255, 0.918));
     transition: opacity 1.8s cubic-bezier(0.4, 0, 0.2, 1), transform 1.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -396,7 +427,7 @@ header nav ul.member-actions li:first-child a:hover:after {
     width: 800px;
     height: 530px;
     max-width: 95vw;
-    background-color: #0f3b2e;
+    background-color: #657059;
     cursor: pointer;
     transform-style: preserve-3d;
     border-radius: 4px;
@@ -434,7 +465,7 @@ header nav ul.member-actions li:first-child a:hover:after {
     left: 0;
     width: 100%;
     height: 50%;
-    background: linear-gradient(180deg, #0f3b2e 0%, #0a2820 100%);
+    background: linear-gradient(180deg, #657059 0%, #d2d2ce 100%);
     clip-path: polygon(0 0, 50% 100%, 100% 0);
     z-index: 30;
     transform-origin: top;
@@ -456,7 +487,7 @@ header nav ul.member-actions li:first-child a:hover:after {
 .envelope-side-left {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, #082018 0%, #0a2820 100%);
+    background: linear-gradient(90deg, #657059 0%, #d2d2ce 100%);
     clip-path: polygon(0 0, 50% 50%, 0 100%);
     z-index: 20;
     border-right: 1px solid rgba(212, 175, 55, 0.2);
@@ -465,7 +496,7 @@ header nav ul.member-actions li:first-child a:hover:after {
 .envelope-side-right {
     position: absolute;
     inset: 0;
-    background: linear-gradient(-90deg, #082018 0%, #0a2820 100%);
+    background: linear-gradient(-90deg, #657059 0%, #d2d2ce 100%);
     clip-path: polygon(100% 0, 50% 50%, 100% 100%);
     z-index: 20;
     border-left: 1px solid rgba(212, 175, 55, 0.2);
@@ -474,7 +505,7 @@ header nav ul.member-actions li:first-child a:hover:after {
 .envelope-bottom {
     position: absolute;
     inset: 0;
-    background: linear-gradient(0deg, #0f3b2e 0%, #0a2820 100%);
+    background: linear-gradient(0deg, #657059 0%, #d2d2ce 100%);
     clip-path: polygon(0 100%, 50% 50%, 100% 100%);
     z-index: 25;
     border-top: 1px solid rgba(212, 175, 55, 0.3);
@@ -498,7 +529,7 @@ header nav ul.member-actions li:first-child a:hover:after {
     transform: translate(-50%, -50%) scale(0.95);
     width: 95%;
     height: 95%;
-    background: #0f3b2e;
+    background: #ece9e4;
     z-index: 10;
     border: 1px solid rgba(212, 188, 141, 0.3);
     transition: transform 1.5s cubic-bezier(0.5, 0, 0.1, 1);
@@ -678,7 +709,7 @@ body.envelope-visible {
 .envelope-base {
     position: absolute;
     inset: 0;
-    background: #082018;
+    background: #657059;
     border-radius: 4px;
 }
 
@@ -689,7 +720,7 @@ body.envelope-visible {
 }
 
 #open-prompt span {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Open Sans';
     font-size: 18px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -747,7 +778,7 @@ body.envelope-visible {
 .hero {
     min-height: 850px;
     background: linear-gradient(135deg, rgba(15, 59, 46, 0.75) 0%, rgba(212, 175, 55, 0.15) 100%),
-        url('../img/pedida1.webp') center center;
+        url('../images/fotofondo1.png') center center;
     background-size: cover;
     background-attachment: fixed;
     background-position: center 20%;
@@ -806,9 +837,9 @@ body.envelope-visible {
 }
 
 .hero-content img {
-    max-width: 250px;
+    max-width: 220px;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 300px;
 }
 
 /* Countdown Timer */
@@ -862,7 +893,7 @@ body.envelope-visible {
 .hero .row .btn:hover {
     background-color: #d4af37 !important;
     background: #d4af37 !important;
-    color: #2E8B57 !important;
+    color: #657059 !important;
     border: 2px solid #d4af37 !important;
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
@@ -957,7 +988,7 @@ section.section-padding:not(#rsvp)::after {
 
 .header {
     font-size: 42px;
-    color: #2E8B57;
+    color: #657059;
     text-align: center;
     margin-bottom: 40px;
     font-family: 'Crimson Pro', serif;
@@ -980,16 +1011,77 @@ section.section-padding:not(#rsvp)::after {
     margin-right: 15px;
     font-size: 38px;
 }
+/*Invitados*/
+#invitados {
+    background: #f9f9f9;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #d4bc8d;
+    margin-bottom: 40px;
+}
+.bloque-grupo-invitados .pases-total{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    font-size: clamp(28px, 5vw, 48px);
+    line-height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    background: #657059;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-family:'Crimson Pro', serif;
+    color: #fff;
+}
+.bloque-grupo-invitados .card-grupo-invitados .card-content{
+    text-align: center;
+}
+.bloque-grupo-invitados .titulo-grupo {
+    margin-bottom: 32px;
+    font-size: 36px;
+    font-family: 'Crimson Pro', serif;
+    color: #657059;
+    font-weight: 400;
+}
+.bloque-grupo-invitados .acompanantes-info {
+    margin-top: 6px;
+    font-size: 17px;
+    color: #657059;
+}
+.bloque-grupo-invitados .lista-invitados {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 12px 0;
+    font-family: 'Manrope', sans-serif;
+}
+.bloque-grupo-invitados .invitado-item {
+    display: block;
+    font-size: 17px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.04);
+    margin: 6px auto;
+    width: fit-content;
+    font-family: 'Manrope', sans-serif;
+    color: #555;
+}
+.bloque-grupo-invitados .mensaje-grupo{
+    margin: 0 0 10px 0;
+    color: #555;
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+    margin-top: 25px;
+}
 
 /* Alternating Sections */
 #intro {
-    background: #f9f9f9;
+    background: #fdfaf2;
     padding-top: 40px;
     padding-bottom: 20px;
 }
 
 #gifts {
-    background: #1a3d2e;
+    background: #657059;
 }
 
 #gallery {
@@ -1033,7 +1125,7 @@ section.section-padding:not(#rsvp)::after {
     max-width: 80rem;              /* max-w-7xl */
     margin: 0 auto;
     background-color: #fcf9f2;     /* bg-surface */
-    color: #1a1c1b;                /* text-on-surface */
+    color: #657059;                /* text-on-surface */
     text-align: left;              /* force left-align for entire section */
 }
 
@@ -1101,7 +1193,7 @@ section.section-padding:not(#rsvp)::after {
     font-family: 'Crimson Pro', serif;      /* font-headline */
     font-size: 36px;                       /* text-4xl (mobile) */
     line-height: 1.1;                      /* leading-tight */
-    color: #228B22;                        /* forest green */
+    color: #657059;                        /* forest green */
     margin-bottom: 32px;                   /* mb-8 */
     font-weight: 400;
 }
@@ -1148,7 +1240,7 @@ section.section-padding:not(#rsvp)::after {
     font-family: 'Crimson Pro', serif;      /* font-headline */
     font-style: italic;                    /* italic */
     font-size: 20px;                       /* text-xl */
-    color: #228B22;                        /* forest green */
+    color: #657059;                        /* forest green */
     margin-bottom: 8px;                    /* mb-2 */
     font-weight: 400;
 }
@@ -1217,7 +1309,7 @@ section.section-padding:not(#rsvp)::after {
    ============================================ */
 
 .events-section {
-    background-color: #1a3d2e;
+    background-color: #657059;
     padding: 64px 32px;
     font-family: 'Manrope', sans-serif;
 }
@@ -1268,7 +1360,7 @@ section.section-padding:not(#rsvp)::after {
 }
 
 .protocols-note {
-    color: #2E8B57;
+    color: #657059;
     font-style: italic;
     font-weight: 600;
     margin-top: 6px;
@@ -1367,7 +1459,7 @@ section.section-padding:not(#rsvp)::after {
     font-family: 'Crimson Pro', serif;
     font-size: 24px;
     font-weight: 400;
-    color: #2E8B57;
+    color: #657059;
     margin: 0;
 }
 
@@ -1577,7 +1669,7 @@ section.section-padding:not(#rsvp)::after {
    ============================================ */
 
 .gallery {
-    background: #1a3d2e;
+    background: #657059;
 }
 
 /* Gallery subsections */
@@ -1621,7 +1713,7 @@ section.section-padding:not(#rsvp)::after {
     font-size: clamp(30px, 4.5vw, 54px);
     font-weight: 400;
     line-height: 1.15;
-    color: #1a1c1b;
+    color: #657059;
     margin: 0;
 }
 
@@ -1769,8 +1861,8 @@ section.section-padding:not(#rsvp)::after {
 
 .file-upload-label:hover {
     background: #fff;
-    border-color: #2E8B57;
-    color: #2E8B57;
+    border-color: #657059;
+    color: #657059;
     transform: translateY(-1px);
 }
 
@@ -2216,14 +2308,14 @@ button.gallery-item {
     font-family: 'Crimson Pro', serif;
     font-size: clamp(2.5rem, 5vw, 3.75rem);
     font-weight: 400;
-    color: #1a1c1b;
+    color: #657059;
     line-height: 1.1;
     margin: 0;
 }
 
 /* Widget container — dark green background */
 .event-map-widget {
-    background: #1a3d2e;
+    background: #657059;
     border: 1px solid rgba(201, 168, 76, 0.5);
     padding: 1rem;
     box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -2263,22 +2355,22 @@ button.gallery-item {
 
 .map-tab:hover {
     background: #c9a84c;
-    color: #004d08;
+    color: #657059;
     border-color: #c9a84c;
 }
 
 .map-tab:hover .map-tab-icon {
-    stroke: #004d08;
+    stroke: #657059;
 }
 
 .map-tab.active {
     background: #ffffff;
-    color: #004d08;
+    color: #657059;
     border-color: #ffffff;
 }
 
 .map-tab.active .map-tab-icon {
-    stroke: #004d08;
+    stroke: #657059;
 }
 
 .map-tab.active:hover {
@@ -2371,7 +2463,7 @@ button.gallery-item {
     font-weight: 600;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: #004d08;
+    color: #657059;
     background: #ffffff;
     border: 1px solid rgba(201, 168, 76, 0.5);
     white-space: nowrap;
@@ -2383,7 +2475,7 @@ button.gallery-item {
 .map-btn-link:hover,
 .map-btn-link:focus {
     background: #fdfaf2;
-    color: #004d08;
+    color: #657059;
     text-decoration: none;
 }
 
@@ -2446,7 +2538,7 @@ button.gallery-item {
 .rsvp-title {
     font-family: 'Crimson Pro', serif;
     font-size: clamp(28px, 5vw, 48px);
-    color: #1a1c1b;
+    color: #657059;
     margin: 0;
     font-weight: 400;
 }
@@ -2487,7 +2579,7 @@ button.gallery-item {
 }
 
 .form-input-group input:focus ~ .material-symbols-outlined {
-    color: #2E8B57;
+    color: #657059;
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -2634,7 +2726,7 @@ button.gallery-item {
 .guest-name {
     font-size: 19px;
     font-weight: 600;
-    color: #2E8B57;
+    color: #657059;
     margin-bottom: 18px;
     display: flex;
     align-items: center;
@@ -2678,19 +2770,19 @@ button.gallery-item {
 }
 
 .attendance-option label:hover {
-    border-color: #2E8B57;
+    border-color: #657059;
     background: #f0f9f4;
 }
 
 .attendance-option input[type="radio"]:checked+label,
 .attendance-option label:has(input[type="radio"]:checked) {
-    border-color: #2E8B57;
+    border-color: #657059;
     background: #e8f5e9;
     font-weight: 600;
 }
 
 .attendance-option.confirmed label {
-    border-color: #2E8B57;
+    border-color: #657059;
 }
 
 .attendance-option.not-attending label {
@@ -2706,7 +2798,7 @@ button.gallery-item {
    not for mouse clicks. */
 .attendance-option input[type="radio"]:focus-visible + span,
 .attendance-option label:focus-within {
-    outline: 2px solid #2E8B57;
+    outline: 2px solid #657059;
     outline-offset: 2px;
     border-radius: 6px;
 }
@@ -2722,8 +2814,8 @@ button.gallery-item {
     font-weight: 600;
     vertical-align: middle;
     background: #e8f5e9;
-    color: #2E8B57;
-    border: 1px solid #2E8B57;
+    color: #657059;
+    border: 1px solid #657059;
     transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 
@@ -2918,7 +3010,7 @@ button.gallery-item {
 .registry-card-name {
     font-family: 'Crimson Pro', serif;
     font-size: 1.25rem;
-    color: #004d08;
+    color: #657059;
     display: block;
 }
 
@@ -3013,7 +3105,7 @@ button.gallery-item {
 .debit-card-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(145deg, #0f3b2e 0%, #1a5a42 40%, #0a2820 100%);
+    background: linear-gradient(145deg, #657059 0%, #1a5a42 40%, #0a2820 100%);
     z-index: 0;
 }
 
@@ -3224,13 +3316,13 @@ button.gallery-item {
 
 .gifts-modal-close:hover {
     background: #f0f0f0;
-    color: #2E8B57;
+    color: #657059;
     transform: rotate(90deg);
 }
 
 .gifts-modal-title {
     font-size: 32px;
-    color: #2E8B57;
+    color: #657059;
     margin-bottom: 10px;
     text-align: center;
     font-family: 'Crimson Pro', serif;
@@ -3253,7 +3345,7 @@ button.gallery-item {
    ============================================ */
 
 .calendar-modal-content {
-    background: #1a3d2e;
+    background: #657059;
     border: 1px solid rgba(201, 168, 76, 0.4);
     border-radius: 4px;
     text-align: center;
@@ -3297,7 +3389,7 @@ button.gallery-item {
    ============================================ */
 
 footer {
-    background: #0F3B2E;
+    background: #657059;
     color: #fff;
     padding: 30px 0 5px 0;
     text-align: center;
@@ -3353,7 +3445,7 @@ footer p {
     left: 0;
     width: 100%;
     z-index: 1050;
-    background: #0f3b2e;
+    background: #657059;
     height: 72px;
     border-top: 1px solid rgba(212, 175, 55, 0.4);
     box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.22);
@@ -3370,7 +3462,7 @@ footer p {
 }
 
 #music-player-bar.mpb-visible {
-    opacity: 1;
+    opacity: 0.9;
     transform: translateY(0);
     pointer-events: auto;
 }
@@ -3387,7 +3479,7 @@ footer p {
 .mpb-track-icon {
     width: 44px;
     height: 44px;
-    background: #1a3d2e;
+    background: #657059;
     border: 1px solid rgba(212, 175, 55, 0.3);
     border-radius: 4px;
     display: flex;
@@ -3791,7 +3883,7 @@ footer p {
         padding-right: 0;
         padding-bottom: 30px;
         border-right: none;
-        border-bottom: 2px solid #2E8B57;
+        border-bottom: 2px solid #657059;
         margin-bottom: 30px;
     }
 
@@ -3881,7 +3973,7 @@ footer p {
     header nav ul.member-actions li a.btn-white:hover {
         background-color: #d4af37;
         border-color: #d4af37;
-        color: #0f3b2e;
+        color: #657059;
     }
 
     header nav ul.primary-nav li a {
@@ -4030,7 +4122,7 @@ footer p {
 
 .calendar-btn-modal:hover {
     background: #c9a84c;
-    color: #1a3d2e;
+    color: #657059;
     border-color: #c9a84c;
     transform: none;
     box-shadow: none;
@@ -4066,7 +4158,7 @@ footer p {
 
 /* RSVP confirmation modal — dark green background */
 .rsvp-modal-content {
-    background: #1a3d2e;
+    background: #657059;
     border: 1px solid rgba(201, 168, 76, 0.4);
     border-radius: 4px;
 }
@@ -4097,8 +4189,8 @@ footer p {
 
 .upload-trigger-wrap {
     display: inline-block;
-    background: linear-gradient(135deg, #004d08 0%, #006c0c 100%);
-    border: 1px solid #d4bc8d;
+    background: linear-gradient(135deg, #657059 0%, #657059 100%);
+    border: 1px solid #657059;
     padding: 24px 32px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
     cursor: pointer;
@@ -4114,7 +4206,7 @@ footer p {
     font-size: 10px;
     letter-spacing: .18em;
     text-transform: uppercase;
-    color: #9c7e00;
+    color: #fff;
     margin: 0 0 12px;
 }
 
@@ -4140,7 +4232,7 @@ footer p {
 }
 
 .upload-trigger-btn .material-symbols-outlined {
-    color: #9c7e00;
+    color: #fff;
     font-size: 26px;
     font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
     pointer-events: none;
@@ -4176,7 +4268,7 @@ footer p {
 
 .upload-modal-content .gifts-modal-close:hover {
     background: #ede8da;
-    color: #2E8B57;
+    color: #657059;
 }
 
 /* Scrollable form area */
