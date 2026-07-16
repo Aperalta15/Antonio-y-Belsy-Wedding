@@ -842,6 +842,8 @@ body.envelope-visible {
     margin-top: 300px;
 }
 
+
+
 /* Countdown Timer */
 .countdown-hero {
     display: flex;
@@ -1016,11 +1018,39 @@ section.section-padding:not(#rsvp)::after {
 #invitados {
     display: flex;
     flex-direction: column;
-    background: #f9f9f9;
+    background: linear-gradient(
+    to bottom,
+    #f9f9f9 0%,
+    #f9f9f9 20%,
+    #fafafa 35%,
+    #fbfbfb 50%,
+    #fcfcfc 65%,
+    #fdfdfd 80%,
+    #ffffff 100%
+);
+    /*background: linear-gradient(to bottom,#f9f9f9 0%, #f9f9f9 50%,#ffffff 50%,#ffffff 100%);*/
     transition: background 0.3s, box-shadow 0.3s;
     position: relative;
     overflow: hidden;
+    padding: 0px 40px;
+
 }
+
+.divider{
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+    height: 90px;
+    background-image: url('../images/dividir.png');  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 .pases-total {
     display: inline-block;
     width: 60px;
@@ -1078,9 +1108,10 @@ section.section-padding:not(#rsvp)::after {
 
 /* Alternating Sections */
 #intro {
-    background: #f9f9f9;
-    padding-top: 40px;
+    background: #fff;
+    padding-top: 10px;
     padding-bottom: 20px;
+    
 }
 
 #gifts {
@@ -1102,10 +1133,16 @@ section.section-padding:not(#rsvp)::after {
     padding-right: 1.5rem;
     text-align: center;
 }
-section.gallery .anim-galeria{
-    width: 70px;
-    margin: 1px auto 20px;
-    
+.anim-galeria{
+    width: clamp(55px, 8vw, 75px);
+    margin-bottom: 20px;
+    color: #657059;
+}
+
+.anim-galeria svg{
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 
@@ -1191,11 +1228,11 @@ section.gallery .anim-galeria{
 .story-eyebrow {
     display: block;
     font-family: 'Manrope', sans-serif;
-    font-size: 10px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #c9a84c !important;
+    color: #bea880 !important;
     text-align: left !important;
     margin-bottom: 0.75rem;
 }
@@ -1290,7 +1327,7 @@ section.gallery .anim-galeria{
 /* ---- RESPONSIVE: small mobile ---- */
 @media (max-width: 576px) {
     .story-section {
-        padding: 80px 16px;
+        padding: 0px 16px;
     }
 
     .story-title {
@@ -1328,11 +1365,11 @@ section.gallery .anim-galeria{
 .events-eyebrow {
     display: block;
     font-family: 'Manrope', sans-serif;
-    font-size: 10px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #c9a84c;
+    color: #bea880;
     text-align: center;
     margin-bottom: 0.75rem;
 }
@@ -1703,30 +1740,45 @@ section.gallery .anim-galeria{
 
 /* ── Bento Gallery ────────────────────────────────────────── */
 .bento-gallery-header {
-    max-width: 520px;
-    margin-bottom: 36px;
+    max-width: 700px;
+    margin: 0 auto 36px;
     padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.bento-gallery-eyebrow1 {
+    display: block;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #bea880;
+    text-align: center;
+    margin-bottom: 0.75rem;
 }
 
 .bento-gallery-eyebrow {
     font-family: 'Crimson Pro', serif;
     font-weight: 400;
-    color: #bea880;
-    width: 100%;
-    display: inline-block;
+    color: #657059;
     font-size: clamp(28px, 5vw, 48px);
-    line-height: 55px;
-    margin-bottom: 5px;
-    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 10px;
 }
 
 .bento-gallery-headline {
     font-family: 'Crimson Pro', serif;
-    font-size: 18px;
+    font-size: clamp(18px, 2vw, 24px);
     font-weight: 400;
     color: #657059;
-    line-height: 1.15;
-    margin: 0 0 1rem;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+    max-width: 650px;
 }
 
 .bento-grid {
@@ -1794,11 +1846,13 @@ section.gallery .anim-galeria{
 .bento-cs-label {
     display: block;
     font-family: 'Manrope', sans-serif;
-    font-size: 9px;
-    letter-spacing: 0.22em;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #bea880;
-    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.75rem;
 }
 
 .bento-cs-text {
@@ -1902,12 +1956,13 @@ section.gallery .anim-galeria{
 .guest-album-eyebrow {
     display: block;
     font-family: 'Manrope', sans-serif;
-    font-size: 10px;
+    font-size: 16px;
     font-weight: 600;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #bea880;
-    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 0.75rem;
 }
 
 .guest-album-headline {
@@ -2302,27 +2357,34 @@ button.gallery-item {
 
 /* Section header */
 .map-section-header {
-    margin-bottom: 3.5rem;
+    max-width: 700px;
+    margin: 0 auto 36px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .map-eyebrow {
     display: block;
     font-family: 'Manrope', sans-serif;
-    font-size: 10px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #c9a84c;
-    margin-bottom: 1rem;
+    color: #bea880;
+    text-align: center;
+    margin-bottom: 0.75rem;
 }
 
 .map-headline {
     font-family: 'Crimson Pro', serif;
-    font-size: clamp(2.5rem, 5vw, 3.75rem);
     font-weight: 400;
     color: #657059;
-    line-height: 1.1;
-    margin: 0;
+    font-size: clamp(28px, 5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 10px;
 }
 
 /* Widget container — dark green background */
@@ -2347,7 +2409,7 @@ button.gallery-item {
     padding: 0.625rem 1.25rem;
     border: 1px solid rgba(201, 168, 76, 0.5);
     background: transparent;
-    color: #c9a84c;
+    color: #bea880;
     font-family: 'Manrope', sans-serif;
     font-size: 10px;
     font-weight: 600;
@@ -2361,14 +2423,14 @@ button.gallery-item {
     width: 16px;
     height: 16px;
     flex-shrink: 0;
-    stroke: #c9a84c;
+    stroke: #bea880;
     transition: stroke 0.3s;
 }
 
 .map-tab:hover {
-    background: #c9a84c;
+    background: #bea880;
     color: #657059;
-    border-color: #c9a84c;
+    border-color: #bea880;
 }
 
 .map-tab:hover .map-tab-icon {
@@ -2387,11 +2449,11 @@ button.gallery-item {
 
 .map-tab.active:hover {
     background: #ffffff;
-    color: #c9a84c;
+    color: #bea880;
 }
 
 .map-tab.active:hover .map-tab-icon {
-    stroke: #c9a84c;
+    stroke: #bea880;
 }
 
 /* Iframes */
@@ -2462,7 +2524,7 @@ button.gallery-item {
     font-size: 10px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #c9a84c;
+    color: #bea880;
     margin-top: 4px;
 }
 
@@ -2533,18 +2595,25 @@ button.gallery-item {
 }
 
 .rsvp-section-header {
-    margin-bottom: 36px;
+    max-width: 700px;
+    margin: 0 auto 36px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .rsvp-eyebrow {
     display: block;
     font-family: 'Manrope', sans-serif;
-    font-size: 10px;
+    font-size: 16px;
     font-weight: 600;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #bea880;
-    margin-bottom: 14px;
+    text-align: center;
+    margin-bottom: 0.75rem;
 }
 
 .rsvp-title {
@@ -2925,18 +2994,25 @@ button.gallery-item {
 }
 
 .registry-section-header {
-    margin-bottom: 3.5rem;
+    max-width: 700px;
+    margin: 0 auto 36px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .registry-eyebrow {
-    font-family: 'Crimson Pro', serif;
-    font-weight: 400;
+    display: block;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     color: #bea880;
-    width: 100%;
-    display: inline-block;
-    font-size: clamp(28px, 5vw, 48px);
-    line-height: 55px;
-    margin-bottom: 5px;
+    text-align: center;
+    margin-bottom: 0.75rem;
 }
 
 section.section-padding .anim-regalos{
@@ -2947,17 +3023,18 @@ section.section-padding .anim-regalos{
 
 .registry-headline {
     font-family: 'Crimson Pro', serif;
-    font-size: 18px;
+    font-size: clamp(18px, 5vw, 28px);
     font-weight: 400;
     color: #ffffff;
-    line-height: 1.15;
+    margin: 0;
     margin: 0 0 1rem;
+ 
 }
 
 
 .registry-subtext {
     font-family: 'Manrope', sans-serif;
-    font-size: 9px;
+    font-size: 12px;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.6);
     max-width: 440px;
@@ -4127,7 +4204,7 @@ footer p {
     padding: 0.625rem 1.25rem;
     border: 1px solid rgba(201, 168, 76, 0.5);
     background: transparent;
-    color: #c9a84c;
+    color: #bea880;
     font-family: 'Manrope', sans-serif;
     font-size: 10px;
     font-weight: 600;
@@ -4140,9 +4217,9 @@ footer p {
 }
 
 .calendar-btn-modal:hover {
-    background: #c9a84c;
+    background: #bea880;
     color: #657059;
-    border-color: #c9a84c;
+    border-color: #bea880;
     transform: none;
     box-shadow: none;
 }
