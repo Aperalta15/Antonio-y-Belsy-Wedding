@@ -1,842 +1,1447 @@
 <!doctype html>
 <html class="no-js" lang="es">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <!-- Content Security Policy  -->
-    <meta http-equiv="Content-Security-Policy" content="
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
         default-src 'self';
+        connect-src 'self' https://wedding-api-six-black.vercel.app
+        https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css.map
+        https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js.map
+        https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js.map
+        script.google.com script.googleusercontent.com
+        *.googleapis.com;  
         script-src 'self' cdn.jsdelivr.net cdnjs.cloudflare.com script.googleusercontent.com *.googleapis.com;
         style-src  'self' 'unsafe-inline' fonts.googleapis.com cdn.jsdelivr.net;
         font-src   'self' fonts.gstatic.com;
         img-src    'self' data: blob: *.googleapis.com;
+
         frame-src  'self' *.google.com *.googleapis.com;
-        connect-src 'self' script.google.com script.googleusercontent.com cdn.jsdelivr.net *.googleapis.com;
         object-src 'none';
         base-uri   'self';
-    ">
+    "
+    />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Antonio & Belsy - Boda 2026</title>
-    <link rel="icon" type="image/x-icon" href="images/A&B-gold.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0f3b2e">
+    <link rel="icon" type="image/x-icon" href="images/A&B-gold.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f3b2e" />
     <!-- OG Meta Tags -->
-    <meta property="og:type" content="website">
-    <!-- Fonts and Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <meta property="og:type" content="website" />
+    <!-- Fonts y Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
     <!-- Single combined font request: Crimson Pro + Manrope + Material Symbols -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;600;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;600;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+    />
     <!-- CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<body id="top" class="envelope-visible">
+  <body id="top" class="envelope-visible">
     <noscript>
-        <div class="noscript-alert">
-            <strong>Atención:</strong> JavaScript está desactivado en tu navegador. Esta página requiere JavaScript para
-            funcionar correctamente (como la confirmación de asistencia).
-        </div>
+      <div class="noscript-alert">
+        <strong>Atención:</strong> JavaScript está desactivado en tu navegador.
+        Esta página requiere JavaScript para funcionar correctamente (como la
+        confirmación de asistencia).
+      </div>
     </noscript>
 
-
     <div class="fixed intro-overlay" id="intro-overlay">
+      <!-- Decoración -->
+      <div class="foliage-frame frame-top"></div>
 
-    <!-- Decoración -->
-    <div class="foliage-frame frame-top">
-       
-    </div>
+      <div class="foliage-frame frame-bottom"></div>
 
-    <div class="foliage-frame frame-bottom">
-        
-    </div>
-
-    <div class="envelope-wrapper" id="envelope-wrapper" role="button" tabindex="0" aria-label="Abrir invitación">
-
+      <div
+        class="envelope-wrapper"
+        id="envelope-wrapper"
+        role="button"
+        tabindex="0"
+        aria-label="Abrir invitación"
+      >
         <div class="envelope linen-texture" id="main-envelope">
+          <div class="envelope-base linen-texture"></div>
 
-            <div class="envelope-base linen-texture"></div>
+          <div class="letter-card">
+            <div class="letter-card-inner"></div>
+          </div>
 
-            <div class="letter-card">
-                <div class="letter-card-inner"></div>
-            </div>
+          <div class="envelope-side-left linen-texture"></div>
+          <div class="envelope-side-right linen-texture"></div>
+          <div class="envelope-bottom linen-texture"></div>
 
-            <div class="envelope-side-left linen-texture"></div>
-            <div class="envelope-side-right linen-texture"></div>
-            <div class="envelope-bottom linen-texture"></div>
+          <div class="internal-trim gold-foil"></div>
 
-            <div class="internal-trim gold-foil"></div>
+          <div class="envelope-flap linen-texture">
+            <div class="flap-trim gold-foil"></div>
+          </div>
 
-            <div class="envelope-flap linen-texture">
-                <div class="flap-trim gold-foil"></div>
-            </div>
-
-            <div class="wax-seal">
-                <img class="wax-seal-bg" src="images/gold-wax-seal.webp" alt="Sello de cera">
-                <img class="wax-seal-logo" src="images/A&B (1).png" alt="Antonio & Belsy">
-            </div>
-
-        </div>
-
-        <div class="open-prompt" id="open-prompt">
-            <span>
-                Una invitación te espera.<br>
-                Haz click para abrir.
-            </span>
-        </div>
-
-    </div>
-
-</div>
-
-    <!-- Hero Section with Navigation -->
-    <section class="hero">
-        <!-- Navigation Bar -->
-        <div class="navigation">
-            <header>
-                <div class="header-content">
-                    <div class="logo"><a href="#top"><img src="images/logoblanco1.png" alt="Antonio & Belsy"
-                                loading="lazy"></a></div>
-                    <div class="header-nav">
-                        <nav>
-                            <ul class="primary-nav">
-                                <li><a href="#intro">Inicio</a></li>
-                                <li><a href="#events">Eventos & Protocolo</a></li>
-                                <li><a href="#gallery">Galería</a></li>
-                                <li><a href="#map">Ubicación</a></li>
-                            </ul>
-                            <ul class="member-actions">
-                                <li><a href="#gifts">Regalos</a></li>
-                                <li><a href="#rsvp" class="btn-white btn-small">CONFIRMACIÓN</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="navicon">
-                        <a class="nav-toggle" href="#" aria-label="Menú"><span></span></a>
-                    </div>
-                </div>
-            </header>
-        </div>
-        <!-- Hero Content -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 offset-md-1">
-                    <div class="hero-content text-center">
-                        <h1 class="sr-only">
-                            Antonio y Belsy - Invitación de Boda
-                        </h1>
-                        <img src="images/A&B1.png" alt="Antonio & Belsy" loading="lazy">
-                        <div id="countdown-hero" class="countdown-hero">
-                            <div>
-                                <span id="d-hero">00</span>
-                                <p>
-                                    Días
-                                </p>
-                            </div>
-                            <div>
-                                <span id="h-hero">00</span>
-                                <p>
-                                    Horas
-                                </p>
-                            </div>
-                            <div>
-                                <span id="m-hero">00</span>
-                                <p>
-                                    Minutos
-                                </p>
-                            </div>
-                            <div>
-                                <span id="s-hero">00</span>
-                                <p>
-                                    Segundos
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 d-none d-sm-block"></div>
-                <div class="col-sm-4 d-none d-sm-block"></div>
-            </div>
-        </div>
-        <div class="down-arrow floating-arrow">
-            <a href="#intro"><span class="material-symbols-outlined">keyboard_arrow_down</span></a>
-        </div>
-    </section>
-
-
-
-    
-    <section id="invitados" class="seccion-principal bloque-grupo-invitados">
-  <div class="container">
-    <div class="row d-flex justify-content-center">
-      <div class="col-12 col-md-10">
-
-        <div class="card-grupo-invitados">
-          <div class="card-content">
-
-            <!-- Cantidad de invitados + acompañantes -->
-            <div class="pases-total">4</div>
-
-            <!-- Titulo -->
-            <h3 class="titulo-grupo">
-              Invitados            </h3>
-
-            <!-- Acompañantes -->
-                            <div class="acompanantes-info"> (1 acompañante)</div>
-              
-            <!-- Lista de invitados -->
-                          <ul class="lista-invitados">
-                                  <li class="invitado-item">Juan García</li>
-                                  <li class="invitado-item">Sofía García</li>
-                                  <li class="invitado-item">Mateo García</li>
-                              </ul>
-            
-            <!-- Mensaje del grupo -->
-                          <p class="mensaje-grupo">Tu presencia es lo más importante. ¡No faltes!</p>
-            
+          <div id="abrirPopup" class="wax-seal">
+            <img
+              class="wax-seal-bg"
+              src="images/gold-wax-seal.webp"
+              alt="Sello de cera"
+            />
+            <img
+              class="wax-seal-logo"
+              src="images/A&B (1).png"
+              alt="Antonio & Belsy"
+            />
           </div>
         </div>
 
+        <div class="open-prompt" id="open-prompt">
+          <span>
+            Una invitación te espera.<br />
+            Haz click para abrir.
+          </span>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="divider div-transparent"></div>
-</section>
+<!-- Validación de ingreso -->
+    <div
+      id="upload-modal"
+      class="gifts-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="upload-modal-title"
+      aria-modal="true"
+    >
+      <div class="gifts-modal-content upload-modal-content">
+      
+        <div class="upload-modal-body">
+          <!-- Form card — event-card structure -->
+          <div class="upload-form-card">
+            <div class="gold-corner tl"></div>
+            <div class="gold-corner tr"></div>
+            <div class="gold-corner bl"></div>
+            <div class="gold-corner br"></div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 id="upload-modal-title" class="card-title" tabindex="-1">
+                  Bienvenido a nuestra boda
+                </h3>
+              </div>
+              <div class="card-divider"></div>
+              <div class="info-list">
+                <div class="info-row">
+                  <span class="info-icon"
+                    ><span class="material-symbols-outlined">pin</span></span
+                  >
+                  <div>
+                    <p class="info-sub">
+                      Por favor, ingresa el código personal que encontrarás en
+                      el mensaje de WhatsApp
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <form id="code-upload-form" class="upload-form-inner">
+                <!-- Código -->
+                <div class="row rsvp-form-row">
+                  <div class="col-12">
+                    <div class="form-input-group">
+                      <span class="material-symbols-outlined">key</span>
+                      <input
+                        type="text"
+                        id="validate-group-code"
+                        placeholder="Código"
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div id="code-alert" role="alert" aria-live="polite"></div>
+                <div class="info-list">
+                  <div class="info-row">
+                    <span class="info-icon"
+                      ><span class="material-symbols-outlined">info</span></span
+                    >
+                    <div>
+                      <a
+                        class="info-sub"
+                        href="https://wa.link/9mn6h6"
+                        target="_blank"
+                      >
+                        ¿No encuentras tu código? Click aquí
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-actions upload-card-actions">
+                  <button
+                    type="submit"
+                    class="upload-submit-btn"
+                    id="upload-submit-btn"
+                  >
+                    <span class="btn-spinner"></span>
+                    <span class="btn-text">Continuar</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section with Navigation -->
+    <section class="hero">
+      <!-- Navigation Bar -->
+      <div class="navigation">
+        <header>
+          <div class="header-content">
+            <div class="logo">
+              <a href="#top"
+                ><img
+                  src="images/logoblanco1.png"
+                  alt="Antonio & Belsy"
+                  loading="lazy"
+              /></a>
+            </div>
+            <div class="header-nav">
+              <nav>
+                <ul class="primary-nav">
+                  <li><a href="#intro">Inicio</a></li>
+                  <li><a href="#events">Eventos & Protocolo</a></li>
+                  <li><a href="#gallery">Galería</a></li>
+                  <li><a href="#map">Ubicación</a></li>
+                </ul>
+                <ul class="member-actions">
+                  <li><a href="#gifts">Regalos</a></li>
+                  <li>
+                    <a href="#rsvp" class="btn-white btn-small">CONFIRMACIÓN</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="navicon">
+              <a class="nav-toggle" href="#" aria-label="Menú"><span></span></a>
+            </div>
+          </div>
+        </header>
+      </div>
+      <!-- Hero Content -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <div class="hero-content text-center">
+              <h1 class="sr-only">Antonio y Belsy - Invitación de Boda</h1>
+              <img src="images/A&B1.png" alt="Antonio & Belsy" loading="lazy" />
+              <div id="countdown-hero" class="countdown-hero">
+                <div>
+                  <span id="d-hero">00</span>
+                  <p>Días</p>
+                </div>
+                <div>
+                  <span id="h-hero">00</span>
+                  <p>Horas</p>
+                </div>
+                <div>
+                  <span id="m-hero">00</span>
+                  <p>Minutos</p>
+                </div>
+                <div>
+                  <span id="s-hero">00</span>
+                  <p>Segundos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 d-none d-sm-block"></div>
+          <div class="col-sm-4 d-none d-sm-block"></div>
+        </div>
+      </div>
+      <div class="down-arrow floating-arrow">
+        <a href="#intro"
+          ><span class="material-symbols-outlined">keyboard_arrow_down</span></a
+        >
+      </div>
+    </section>
+
+    <section id="invitados" class="seccion-principal bloque-grupo-invitados">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-md-10">
+            <div class="card-grupo-invitados">
+              <div id="pases-card" class="card-content">
+                <!-- Cantidad de invitados + acompañantes -->
+                <div class="pases-total">4</div>
+
+                <!-- Titulo -->
+                <h3 class="titulo-grupo">Invitados</h3>
+
+                <ul id="invitado" class="lista-invitados">
+                  <li class="invitado-item">Juan García</li>
+                </ul>
+
+                <!-- Acompañantes -->
+                <div id="acompanantes-info" class="acompanantes-info">(1 acompañante)</div>
+
+                <!-- Lista de invitados -->
+                <ul id="listaInvitados" class="lista-invitados"></ul>
+
+                <!-- Mensaje del grupo -->
+                <p class="mensaje-grupo">
+                  Tu presencia es lo más importante. <br />¡No faltes!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider div-transparent"></div>
+    </section>
 
     <!-- Nuestra Historia — Story Section -->
     <section id="intro" class="story-section">
-        <div class="story-grid">
-            <!-- Imagen de la pareja -->
-            <div class="story-image-col">
-                <div class="story-image-frame">
-                    <img src="images/belton.jpg" alt="Antonio y Belsy" class="story-image" loading="lazy" />
-                </div>
-            </div>
-            <div class="story-text-col">
-                <p class="story-eyebrow">
-                    Con Amor
-                </p>
-                <h2 class="story-title">
-                    Nuestra Historia.
-                </h2>
-                <!-- Texto de la historia -->
-                <div class="story-paragraphs">
-                    <p>
-                        Todo comenzó un sábado de Carnaval en Baila la Calle de la 50. Entre una de sus primeras conversaciones y la divertida historia de un sombrero que al final no era de él, 
-                        nació una conexión inesperada. Una salida en moto, una invitación a su casa y muchos momentos compartidos hicieron que una hermosa amistad se transformara en el amor de sus vidas.
-                        <br>
-                        Hoy, con el corazón lleno de ilusión, quieren compartir con sus seres queridos el comienzo de este nuevo capítulo y celebrar juntos el "para siempre".
-                    </p>
-                    <p>
-                        Con mucha alegría te invitamos a ser parte de esta celebración donde uniremos nuestras vidas
-                        y nuestras familias en una sola.
-                    </p>
-                </div>
-                <!-- Divider dorado -->
-                <div class="story-gold-divider"></div>
-                <!-- Sub Seccion - Familias y Padrinos -->
-                <div class="story-families">
-                    <div class="story-family-item">
-                        <h4 class="story-family-title">
-                            Papás de Antonio
-                        </h4>
-                        <p class="story-family-names">
-                            Jacquelin Cecilia Bonadiez Castillo
-                        </p>
-                        <p class="story-family-names">
-                            Jose De Los Santos Peralta Hernandez
-                        </p>
-                    </div>
-                    <div class="story-family-item">
-                        <h4 class="story-family-title">
-                            Papás de Belsy
-                        </h4>
-                        <p class="story-family-names">
-                            Yasmin Elena Camargo Martinez
-                        </p>
-                        <p class="story-family-names">
-                            Juana Evangelista Martinez Florez
-                        </p>
-                    </div>
-                    <div class="story-family-item">
-                        <h4 class="story-family-title">
-                            Padrinos
-                        </h4>
-                        <p class="story-family-names">
-                            Jose Jesus Peralta Bonadiez
-                        </p>
-                        <p class="story-family-names">
-                            Esta pendiente
-                        </p>
-                    </div>
-                </div>
-            </div>
+      <div class="story-grid">
+        <!-- Imagen de la pareja -->
+        <div class="story-image-col">
+          <div class="story-image-frame">
+            <img
+              src="images/belton.jpg"
+              alt="Antonio y Belsy"
+              class="story-image"
+              loading="lazy"
+            />
+          </div>
         </div>
+        <div class="story-text-col">
+          <p class="story-eyebrow">Con Amor</p>
+          <h2 class="story-title">Nuestra Historia.</h2>
+          <!-- Texto de la historia -->
+          <div class="story-paragraphs">
+            <p>
+              Todo comenzó un sábado de Carnaval en Baila la Calle de la 50.
+              Entre una de sus primeras conversaciones y la divertida historia
+              de un sombrero que al final no era de él, nació una conexión
+              inesperada. Una salida en moto, una invitación a su casa y muchos
+              momentos compartidos hicieron que una hermosa amistad se
+              transformara en el amor de sus vidas.
+              <br />
+              Hoy, con el corazón lleno de ilusión, quieren compartir con sus
+              seres queridos el comienzo de este nuevo capítulo y celebrar
+              juntos el "para siempre".
+            </p>
+            <p>
+              Con mucha alegría te invitamos a ser parte de esta celebración
+              donde uniremos nuestras vidas y nuestras familias en una sola.
+            </p>
+          </div>
+          <!-- Divider dorado -->
+          <div class="story-gold-divider"></div>
+          <!-- Sub Seccion - Familias y Padrinos -->
+          <div class="story-families">
+            <div class="story-family-item">
+              <h4 class="story-family-title">Papás de Antonio</h4>
+              <p class="story-family-names">
+                Jacquelin Cecilia Bonadiez Castillo
+              </p>
+              <p class="story-family-names">
+                Jose De Los Santos Peralta Hernandez
+              </p>
+            </div>
+            <div class="story-family-item">
+              <h4 class="story-family-title">Papás de Belsy</h4>
+              <p class="story-family-names">Yasmin Elena Camargo Martinez</p>
+              <p class="story-family-names">
+                Juana Evangelista Martinez Florez
+              </p>
+            </div>
+            <div class="story-family-item">
+              <h4 class="story-family-title">Padrinos</h4>
+              <p class="story-family-names">Jose Jesus Peralta Bonadiez</p>
+              <p class="story-family-names"></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Events Section -->
     <section id="events" class="events-section">
-        <p class="events-eyebrow">
-            La Celebración
-        </p>
-        <h2 class="events-title">
-            Eventos &amp; Protocolo
-        </h2>
-        <div class="gold-divider-top"></div>
-        <!-- Event Cards Grid -->
-        <div class="cards-grid">
-            <!-- Ceremony Card -->
-            <div class="event-card">
-                <div class="gold-corner tl"></div>
-                <div class="gold-corner tr"></div>
-                <div class="gold-corner bl"></div>
-                <div class="gold-corner br"></div>
-                <div class="card-image">
-                    <img src="images/iglesia.jpg" alt="Parroquia Sagrado Corazón de Jesús"
-                        loading="lazy" />
-                    <div class="date-badge">
-                        <span class="month">Nov</span>
-                        <span class="day">28</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="card-header-row">
-                        <h3 class="card-title">
-                            Ceremonia Religiosa
-                        </h3>
-                        <span class="card-icon"><span class="material-symbols-outlined">church</span></span>
-                    </div>
-                    <div class="card-divider"></div>
-                    <div class="info-list">
-                        <div class="info-row">
-                            <span class="info-icon"><span class="material-symbols-outlined">schedule</span></span>
-                            <div>
-                                <p class="info-label">
-                                    3:45 PM
-                                </p>
-                                <p class="info-sub">
-                                    Favor de llegar 15 minutos antes
-                                </p>
-                            </div>
-                        </div>
-                        <div class="info-row">
-                            <span class="info-icon"><span class="material-symbols-outlined">location_on</span></span>
-                            <div>
-                                <p class="info-label">
-                                    Parroquia Sagrado Corazón de Jesús
-                                </p>
-                                <p class="info-sub">
-                                    Templo histórico de estilo neorrománico ubicado en la carrera 53 # 48-04.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="info-row">
-                            <span class="info-icon"><span class="material-symbols-outlined">star</span></span>
-                            <div>
-                                <p class="info-sub">
-                                    El momento más importante donde diremos "Sí, Acepto" ante Dios, nuestras familias y
-                                    amigos.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-actions">
-                        <a class="btn-main" href="#map" data-map-tab="map-ceremony">
-                            <span class="material-symbols-outlined">location_on</span>
-                            Ubicación
-                        </a>
-                        <button class="btn-icon" title="Añadir al Calendario" id="cal-btn-ceremony">
-                            <span class="material-symbols-outlined">calendar_today</span>
-                        </button>
-                    </div>
-                </div>
+      <p class="events-eyebrow">La Celebración</p>
+      <h2 class="events-title">Eventos &amp; Protocolo</h2>
+      <div class="gold-divider-top"></div>
+      <!-- Event Cards Grid -->
+      <div class="cards-grid">
+        <!-- Ceremony Card -->
+        <div class="event-card">
+          <div class="gold-corner tl"></div>
+          <div class="gold-corner tr"></div>
+          <div class="gold-corner bl"></div>
+          <div class="gold-corner br"></div>
+          <div class="card-image">
+            <img
+              src="images/iglesia.jpg"
+              alt="Parroquia Sagrado Corazón de Jesús"
+              loading="lazy"
+            />
+            <div class="date-badge">
+              <span class="month">Nov</span>
+              <span class="day">28</span>
             </div>
-            <!-- Reception Card -->
-            <div class="event-card">
-                <div class="gold-corner tl"></div>
-                <div class="gold-corner tr"></div>
-                <div class="gold-corner bl"></div>
-                <div class="gold-corner br"></div>
-                <div class="card-image">
-                    <img src="images/recepcion.webp" alt="HOTEL GENOVA" loading="lazy" />
-                    <div class="date-badge">
-                        <span class="month">Nov</span>
-                        <span class="day">28</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="card-header-row">
-                        <h3 class="card-title">
-                            Recepción y Cena
-                        </h3>
-                        <span class="card-icon"><span class="material-symbols-outlined">wine_bar</span></span>
-                    </div>
-                    <div class="card-divider"></div>
-                    <div class="info-list">
-                        <div class="info-row">
-                            <span class="info-icon"><span class="material-symbols-outlined">schedule</span></span>
-                            <div>
-                                <p class="info-label">
-                                    5:15 PM
-                                </p>
-                                <p class="info-sub">
-                                    Hora de coctel seguida de cena
-                                </p>
-                            </div>
-                        </div>
-                        <div class="info-row">
-                            <span class="info-icon"><span class="material-symbols-outlined">location_on</span></span>
-                            <div>
-                                <p class="info-label">
-                                    HOTEL GENOVA
-                                </p>
-                                <p class="info-sub">
-                                    Cl. 44 #44-66, Nte. Centro Historico, Barranquilla, Atlántico
-                                </p>
-                            </div>
-                        </div>
-                        <div class="info-row">
-                            <span class="info-icon"><span class="material-symbols-outlined">star</span></span>
-                            <div>
-                                <p class="info-sub">
-                                    Una noche llena de alegría, música, baile y celebración con nuestras personas más
-                                    queridas.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-actions">
-                        <a class="btn-main" href="#map" data-map-tab="map-reception">
-                            <span class="material-symbols-outlined">location_on</span>
-                            Ubicación
-                        </a>
-                        <button class="btn-icon" title="Añadir al Calendario" id="cal-btn-reception">
-                            <span class="material-symbols-outlined">calendar_today</span>
-                        </button>
-                    </div>
-                </div>
+          </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="card-title">Ceremonia Religiosa</h3>
+              <span class="card-icon"
+                ><span class="material-symbols-outlined">church</span></span
+              >
             </div>
-            <!-- Protocol Card -->
-            <div class="event-card protocols-card">
-                <div class="gold-corner tl"></div>
-                <div class="gold-corner tr"></div>
-                <div class="gold-corner bl"></div>
-                <div class="gold-corner br"></div>
-                <div class="card-body">
-                    <div class="card-header-row">
-                        <h3 class="card-title">
-                            Código de Vestimenta
-                        </h3>
-                        <span class="card-icon"><span class="material-symbols-outlined">info</span></span>
-                    </div>
-                    <div class="card-divider"></div>
-                    <div class="info-list">
-                        <p class="info-sub">
-                            <strong>Etiqueta:</strong> Formal / Cocktail Elegante (Winter Chic)
-                        </p>
-                        <div class="info-row">
-                            <span class="info-icon"><span class="material-symbols-outlined">woman</span></span>
-                            <div>
-                                <p class="info-label">
-                                    Mujeres:
-                                </p>
-                                <p class="info-sub">
-                                    Vestido largo elegante. Abrigo o chal formal opcional por el clima.
-                                </p>
-                            </div>
-                            <span class="info-icon"><span class="material-symbols-outlined">man</span></span>
-                            <div>
-                                <p class="info-label">
-                                    Hombres:
-                                </p>
-                                <p class="info-sub">
-                                    Traje oscuro con camisa formal; corbata o moño opcional.
-                                </p>
-                            </div>
-                        </div>
-                        <p class="info-sub protocols-note">
-                            "Recomendamos colores oscuros o tonos invernales y evitar tonos en blanco para no opacar a
-                            la novia."
-                        </p>
-                    </div>
+            <div class="card-divider"></div>
+            <div class="info-list">
+              <div class="info-row">
+                <span class="info-icon"
+                  ><span class="material-symbols-outlined">schedule</span></span
+                >
+                <div>
+                  <p class="info-label">3:45 PM</p>
+                  <p class="info-sub">Favor de llegar 15 minutos antes</p>
                 </div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon"
+                  ><span class="material-symbols-outlined"
+                    >location_on</span
+                  ></span
+                >
+                <div>
+                  <p class="info-label">Parroquia Sagrado Corazón de Jesús</p>
+                  <p class="info-sub">
+                    Templo histórico de estilo neorrománico ubicado en la
+                    carrera 53 # 48-04.
+                  </p>
+                </div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon"
+                  ><span class="material-symbols-outlined">star</span></span
+                >
+                <div>
+                  <p class="info-sub">
+                    El momento más importante donde diremos "Sí, Acepto" ante
+                    Dios, nuestras familias y amigos.
+                  </p>
+                </div>
+              </div>
             </div>
+            <div class="card-actions">
+              <a class="btn-main" href="#map" data-map-tab="map-ceremony">
+                <span class="material-symbols-outlined">location_on</span>
+                Ubicación
+              </a>
+              <button
+                class="btn-icon"
+                title="Añadir al Calendario"
+                id="cal-btn-ceremony"
+              >
+                <span class="material-symbols-outlined">calendar_today</span>
+              </button>
+            </div>
+          </div>
         </div>
+        <!-- Reception Card -->
+        <div class="event-card">
+          <div class="gold-corner tl"></div>
+          <div class="gold-corner tr"></div>
+          <div class="gold-corner bl"></div>
+          <div class="gold-corner br"></div>
+          <div class="card-image">
+            <img
+              src="images/recepcion.webp"
+              alt="HOTEL GENOVA"
+              loading="lazy"
+            />
+            <div class="date-badge">
+              <span class="month">Nov</span>
+              <span class="day">28</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="card-title">Recepción y Cena</h3>
+              <span class="card-icon"
+                ><span class="material-symbols-outlined">wine_bar</span></span
+              >
+            </div>
+            <div class="card-divider"></div>
+            <div class="info-list">
+              <div class="info-row">
+                <span class="info-icon"
+                  ><span class="material-symbols-outlined">schedule</span></span
+                >
+                <div>
+                  <p class="info-label">5:15 PM</p>
+                  <p class="info-sub">Hora de coctel seguida de cena</p>
+                </div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon"
+                  ><span class="material-symbols-outlined"
+                    >location_on</span
+                  ></span
+                >
+                <div>
+                  <p class="info-label">HOTEL GENOVA</p>
+                  <p class="info-sub">
+                    Cl. 44 #44-66, Nte. Centro Historico, Barranquilla,
+                    Atlántico
+                  </p>
+                </div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon"
+                  ><span class="material-symbols-outlined">star</span></span
+                >
+                <div>
+                  <p class="info-sub">
+                    Una noche llena de alegría, música, baile y celebración con
+                    nuestras personas más queridas.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a class="btn-main" href="#map" data-map-tab="map-reception">
+                <span class="material-symbols-outlined">location_on</span>
+                Ubicación
+              </a>
+              <button
+                class="btn-icon"
+                title="Añadir al Calendario"
+                id="cal-btn-reception"
+              >
+                <span class="material-symbols-outlined">calendar_today</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Protocol Card -->
+        <div class="event-card protocols-card">
+          <div class="gold-corner tl"></div>
+          <div class="gold-corner tr"></div>
+          <div class="gold-corner bl"></div>
+          <div class="gold-corner br"></div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <h3 class="card-title">Código de Vestimenta</h3>
+              <span class="card-icon"
+                ><span class="material-symbols-outlined">info</span></span
+              >
+            </div>
+            <div class="card-divider"></div>
+            <div class="info-list">
+              <p class="info-sub">
+                <strong>Etiqueta:</strong> Formal / Cocktail Elegante
+              </p>
+              <div class="info-row">
+                <span class="info-icon"
+                  ><span class="material-symbols-outlined">woman</span></span
+                >
+                <div>
+                  <p class="info-label">Mujeres:</p>
+                  <p class="info-sub">
+                    Vestido largo y elegante.
+                    Tonos pastel empolvados y suaves.
+                  </p>
+                </div>
+                <span class="info-icon"
+                  ><span class="material-symbols-outlined">man</span></span
+                >
+                <div>
+                  <p class="info-label">Hombres:</p>
+                  <p class="info-sub">
+               Camisa formal de manga larga y pantalón clásico elegante.                  </p>
+                </div>
+              </div>
+              <p class="info-sub protocols-note">
+                "Les invitamos a vestir en tonos pastel empolvados y suaves. Agradecemos evitar blanco, crema, arena, beige y tonos verdes, reservados para la decoración y los novios."
+              </p>
+              <button id="palette-btn" type="button" class="palette-btn">
+  Ver paleta de colores permitidos
+</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery section-padding">
-        <div class="container">
-            <p class="bento-gallery-eyebrow1">
-            Galería
-        </p>
-            <!-- Gallery Header -->
-            <div class="bento-gallery-header">
-                <span class="bento-gallery-eyebrow">Retratos de Nuestro Amor</span>
-                <div class="anim-galeria">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111 121" width="111" height="121" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);"><defs><clipPath id="__lottie_element_73"><rect width="111" height="121" x="0" y="0"></rect></clipPath></defs><g clip-path="url(#__lottie_element_73)"><g transform="matrix(1,0,0,1,0,0)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,69.58100128173828,37.60599899291992)"><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="currentColor" stroke-opacity="1" stroke-width="3.681" d=" M7.617000102996826,11.065999984741211 C7.617000102996826,11.065999984741211 -7.618000030517578,11.065999984741211 -7.618000030517578,11.065999984741211 C-9.434000015258789,11.065999984741211 -10.904999732971191,9.593999862670898 -10.904999732971191,7.7779998779296875 C-10.904999732971191,7.7779998779296875 -10.904999732971191,-7.7769999504089355 -10.904999732971191,-7.7769999504089355 C-10.904999732971191,-9.593000411987305 -9.434000015258789,-11.065999984741211 -7.618000030517578,-11.065999984741211 C-7.618000030517578,-11.065999984741211 7.617000102996826,-11.065999984741211 7.617000102996826,-11.065999984741211 C9.432999610900879,-11.065999984741211 10.904999732971191,-9.593000411987305 10.904999732971191,-7.7769999504089355 C10.904999732971191,-7.7769999504089355 10.904999732971191,7.7779998779296875 10.904999732971191,7.7779998779296875 C10.904999732971191,9.593999862670898 9.432999610900879,11.065999984741211 7.617000102996826,11.065999984741211z"></path></g></g><g transform="matrix(1,0,0,1,0,0)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,45.99800109863281,67.86699676513672)"><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="currentColor" stroke-opacity="1" stroke-width="3.681" d=" M36.66899871826172,-5.685999870300293 C36.66899871826172,-5.685999870300293 36.66899871826172,-11.456999778747559 36.66899871826172,-11.456999778747559 C39.69200134277344,-11.531000137329102 42.12200164794922,-13.99899959564209 42.12200164794922,-17.040000915527344 C42.12200164794922,-17.040000915527344 42.12200164794922,-43.48500061035156 42.12200164794922,-43.48500061035156 C42.12200164794922,-46.57099914550781 39.61899948120117,-49.07400131225586 36.53300094604492,-49.07400131225586 C36.53300094604492,-49.07400131225586 10.633000373840332,-49.07400131225586 10.633000373840332,-49.07400131225586 C7.546000003814697,-49.07400131225586 5.044000148773193,-46.57099914550781 5.044000148773193,-43.48500061035156 C5.044000148773193,-43.48500061035156 5.044000148773193,-17.040000915527344 5.044000148773193,-17.040000915527344 C5.044000148773193,-13.95300006866455 7.546000003814697,-11.451000213623047 10.633000373840332,-11.451000213623047 C10.633000373840332,-11.451000213623047 11.859000205993652,-11.451000213623047 11.859000205993652,-11.451000213623047 C11.859000205993652,-11.451000213623047 11.859000205993652,-5.72599983215332 11.859000205993652,-5.72599983215332 C11.859000205993652,-5.72599983215332 -35.93199920654297,-5.72599983215332 -35.93199920654297,-5.72599983215332 C-39.803001403808594,-5.72599983215332 -42.93899917602539,-2.5869998931884766 -42.93899917602539,1.2829999923706055 C-42.93899917602539,1.2829999923706055 -42.93899917602539,42.064998626708984 -42.93899917602539,42.064998626708984 C-42.93899917602539,45.93600082397461 -39.803001403808594,49.07400131225586 -35.93199920654297,49.07400131225586 C-35.93199920654297,49.07400131225586 35.93199920654297,49.07400131225586 35.93199920654297,49.07400131225586 C39.801998138427734,49.07400131225586 42.93899917602539,45.93600082397461 42.93899917602539,42.064998626708984 C42.93899917602539,42.064998626708984 42.93899917602539,1.2829999923706055 42.93899917602539,1.2829999923706055 C42.93899917602539,-2.3380000591278076 40.19200134277344,-5.316999912261963 36.66899871826172,-5.685999870300293z"></path></g><g opacity="1" transform="matrix(1,0,0,1,45.99800109863281,88.7239990234375)"><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="currentColor" stroke-opacity="1" stroke-width="3.681" d=" M17.584999084472656,0.0010000000474974513 C17.584999084472656,9.711999893188477 9.711000442504883,17.584999084472656 -0.0010000000474974513,17.584999084472656 C-9.711999893188477,17.584999084472656 -17.584999084472656,9.711999893188477 -17.584999084472656,0.0010000000474974513 C-17.584999084472656,-9.711000442504883 -9.711999893188477,-17.584999084472656 -0.0010000000474974513,-17.584999084472656 C9.711000442504883,-17.584999084472656 17.584999084472656,-9.711000442504883 17.584999084472656,0.0010000000474974513z"></path></g></g><g transform="matrix(0,0,0,0,46.39699935913086,88.28099822998047)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,45.99800109863281,88.7239990234375)"><path fill="currentColor" fill-opacity="1" d=" M17.584999084472656,0.0010000000474974513 C17.584999084472656,9.711999893188477 9.711000442504883,17.584999084472656 -0.0010000000474974513,17.584999084472656 C-9.711999893188477,17.584999084472656 -17.584999084472656,9.711999893188477 -17.584999084472656,0.0010000000474974513 C-17.584999084472656,-9.711000442504883 -9.711999893188477,-17.584999084472656 -0.0010000000474974513,-17.584999084472656 C9.711000442504883,-17.584999084472656 17.584999084472656,-9.711000442504883 17.584999084472656,0.0010000000474974513z"></path></g></g><g transform="matrix(1,0,0,1,0,0)" opacity="0.14093750000187286" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,38.15999984741211,16.53499984741211)"><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="currentColor" stroke-opacity="1" stroke-width="3.681" d=" M-4.390999794006348,-3.194000005722046 C-4.390999794006348,-3.194000005722046 4.390999794006348,3.194000005722046 4.390999794006348,3.194000005722046"></path></g><g opacity="1" transform="matrix(1,0,0,1,38.15999984741211,42.29899978637695)"><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="currentColor" stroke-opacity="1" stroke-width="3.681" d=" M-4.390999794006348,3.194000005722046 C-4.390999794006348,3.194000005722046 4.390999794006348,-3.194000005722046 4.390999794006348,-3.194000005722046"></path></g><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="currentColor" stroke-opacity="1" stroke-width="3.681" d=" M30.224000930786133,29.426000595092773 C30.224000930786133,29.426000595092773 39.76599884033203,29.426000595092773 39.76599884033203,29.426000595092773"></path></g><g opacity="1" transform="matrix(1,0,0,1,99.36000061035156,16.53499984741211)"><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="currentColor" stroke-opacity="1" stroke-width="3.681" d=" M4.390999794006348,-3.194000005722046 C4.390999794006348,-3.194000005722046 -4.390999794006348,3.194000005722046 -4.390999794006348,3.194000005722046"></path></g><g opacity="1" transform="matrix(1,0,0,1,99.36000061035156,42.29899978637695)"><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="currentColor" stroke-opacity="1" stroke-width="3.681" d=" M4.390999794006348,3.194000005722046 C4.390999794006348,3.194000005722046 -4.390999794006348,-3.194000005722046 -4.390999794006348,-3.194000005722046"></path></g><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="currentColor" stroke-opacity="1" stroke-width="3.681" d=" M107.29499816894531,29.426000595092773 C107.29499816894531,29.426000595092773 97.75299835205078,29.426000595092773 97.75299835205078,29.426000595092773"></path></g></g><g transform="matrix(1,0,0,1,0,0)" opacity="0.09395833333458199" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,69.58100128173828,37.60599899291992)"><path fill="currentColor" fill-opacity="1" d=" M7.617000102996826,11.065999984741211 C7.617000102996826,11.065999984741211 -7.618000030517578,11.065999984741211 -7.618000030517578,11.065999984741211 C-9.434000015258789,11.065999984741211 -10.904999732971191,9.593999862670898 -10.904999732971191,7.7779998779296875 C-10.904999732971191,7.7779998779296875 -10.904999732971191,-7.7769999504089355 -10.904999732971191,-7.7769999504089355 C-10.904999732971191,-9.593000411987305 -9.434000015258789,-11.065999984741211 -7.618000030517578,-11.065999984741211 C-7.618000030517578,-11.065999984741211 7.617000102996826,-11.065999984741211 7.617000102996826,-11.065999984741211 C9.432999610900879,-11.065999984741211 10.904999732971191,-9.593000411987305 10.904999732971191,-7.7769999504089355 C10.904999732971191,-7.7769999504089355 10.904999732971191,7.7779998779296875 10.904999732971191,7.7779998779296875 C10.904999732971191,9.593999862670898 9.432999610900879,11.065999984741211 7.617000102996826,11.065999984741211z"></path></g></g></g></svg></div>
-                <h2 class="bento-gallery-headline">
-                    Un minuto, un segundo, un instante que queda en la eternidad
-                </h2>
-            </div>
-            <!-- Bento Grid -->
-            <div class="bento-grid">
-                <!-- Large feature image (2 cols × 2 rows) -->
-                <div class="bento-item bento-large">
-                    <img src="images/tybe.JPG" alt="Pedida de mano" loading="lazy">
-                </div>
-                <!-- Top-right small image -->
-                <div class="bento-item bento-small">
-                    <img src="images/pedi2.jpeg" alt="Pedida de mano 2" loading="lazy">
-                </div>
-                <!-- Bottom-right small image -->
-                <div class="bento-item bento-small">
-                    <img src="images/pedi3.JPG" alt="Pedida de mano 3" loading="lazy">
-                </div>
-                <!-- Wide bottom tile: coming soon -->
-                <div class="bento-item bento-wide bento-coming-soon">
-                    <span class="bento-cs-label">Próximamente</span>
-                    <p class="bento-cs-text">
-                        Las fotos de nuestra boda aparecerán aquí muy pronto
-                    </p>
-                </div>
-            </div>
-            <!-- Upload for Guest photos -->
-            <div class="upload-trigger-row">
-                <button class="upload-trigger-wrap" id="upload-trigger-btn">
-                    <p class="upload-eyebrow">
-                        Contribuye a nuestro álbum
-                    </p>
-                    <div class="upload-trigger-btn">
-                        <span class="upload-trigger-text">Sube tus Fotos</span>
-                        <span class="material-symbols-outlined">upload_file</span>
-                    </div>
-                </button>
-            </div>
-            <!-- Display guest-uploaded photos -->
-            <div class="gallery-subsection upload-subsection upload-subsection-compact">
-                <!-- Polaroid grid -->
-                <div class="guest-album-header">
-                    <span class="guest-album-eyebrow">Álbum Colaborativo</span>
-                </div>
-                <div id="polaroid-grid" class="polaroid-grid">
-                    <div class="no-photos-msg">
-                        <span class="material-symbols-outlined no-photos-icon">photo_camera</span>
-                        <p>
-                            Aún no hay fotos. ¡Ayúdanos a llenar este álbum de memorias!
-                        </p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <p class="bento-gallery-eyebrow1">Galería</p>
+        <!-- Gallery Header -->
+        <div class="bento-gallery-header">
+          <span class="bento-gallery-eyebrow">Retratos de Nuestro Amor</span>
+          <div class="anim-galeria">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 111 121"
+              width="111"
+              height="121"
+              preserveAspectRatio="xMidYMid meet"
+              style="
+                width: 100%;
+                height: 100%;
+                transform: translate3d(0px, 0px, 0px);
+              "
+            >
+              <defs>
+                <clipPath id="__lottie_element_73">
+                  <rect width="111" height="121" x="0" y="0"></rect>
+                </clipPath>
+              </defs>
+              <g clip-path="url(#__lottie_element_73)">
+                <g
+                  transform="matrix(1,0,0,1,0,0)"
+                  opacity="1"
+                  style="display: block"
+                >
+                  <g
+                    opacity="1"
+                    transform="matrix(1,0,0,1,69.58100128173828,37.60599899291992)"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="miter"
+                      fill-opacity="0"
+                      stroke-miterlimit="10"
+                      stroke="currentColor"
+                      stroke-opacity="1"
+                      stroke-width="3.681"
+                      d=" M7.617000102996826,11.065999984741211 C7.617000102996826,11.065999984741211 -7.618000030517578,11.065999984741211 -7.618000030517578,11.065999984741211 C-9.434000015258789,11.065999984741211 -10.904999732971191,9.593999862670898 -10.904999732971191,7.7779998779296875 C-10.904999732971191,7.7779998779296875 -10.904999732971191,-7.7769999504089355 -10.904999732971191,-7.7769999504089355 C-10.904999732971191,-9.593000411987305 -9.434000015258789,-11.065999984741211 -7.618000030517578,-11.065999984741211 C-7.618000030517578,-11.065999984741211 7.617000102996826,-11.065999984741211 7.617000102996826,-11.065999984741211 C9.432999610900879,-11.065999984741211 10.904999732971191,-9.593000411987305 10.904999732971191,-7.7769999504089355 C10.904999732971191,-7.7769999504089355 10.904999732971191,7.7779998779296875 10.904999732971191,7.7779998779296875 C10.904999732971191,9.593999862670898 9.432999610900879,11.065999984741211 7.617000102996826,11.065999984741211z"
+                    ></path>
+                  </g>
+                </g>
+                <g
+                  transform="matrix(1,0,0,1,0,0)"
+                  opacity="1"
+                  style="display: block"
+                >
+                  <g
+                    opacity="1"
+                    transform="matrix(1,0,0,1,45.99800109863281,67.86699676513672)"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="miter"
+                      fill-opacity="0"
+                      stroke-miterlimit="10"
+                      stroke="currentColor"
+                      stroke-opacity="1"
+                      stroke-width="3.681"
+                      d=" M36.66899871826172,-5.685999870300293 C36.66899871826172,-5.685999870300293 36.66899871826172,-11.456999778747559 36.66899871826172,-11.456999778747559 C39.69200134277344,-11.531000137329102 42.12200164794922,-13.99899959564209 42.12200164794922,-17.040000915527344 C42.12200164794922,-17.040000915527344 42.12200164794922,-43.48500061035156 42.12200164794922,-43.48500061035156 C42.12200164794922,-46.57099914550781 39.61899948120117,-49.07400131225586 36.53300094604492,-49.07400131225586 C36.53300094604492,-49.07400131225586 10.633000373840332,-49.07400131225586 10.633000373840332,-49.07400131225586 C7.546000003814697,-49.07400131225586 5.044000148773193,-46.57099914550781 5.044000148773193,-43.48500061035156 C5.044000148773193,-43.48500061035156 5.044000148773193,-17.040000915527344 5.044000148773193,-17.040000915527344 C5.044000148773193,-13.95300006866455 7.546000003814697,-11.451000213623047 10.633000373840332,-11.451000213623047 C10.633000373840332,-11.451000213623047 11.859000205993652,-11.451000213623047 11.859000205993652,-11.451000213623047 C11.859000205993652,-11.451000213623047 11.859000205993652,-5.72599983215332 11.859000205993652,-5.72599983215332 C11.859000205993652,-5.72599983215332 -35.93199920654297,-5.72599983215332 -35.93199920654297,-5.72599983215332 C-39.803001403808594,-5.72599983215332 -42.93899917602539,-2.5869998931884766 -42.93899917602539,1.2829999923706055 C-42.93899917602539,1.2829999923706055 -42.93899917602539,42.064998626708984 -42.93899917602539,42.064998626708984 C-42.93899917602539,45.93600082397461 -39.803001403808594,49.07400131225586 -35.93199920654297,49.07400131225586 C-35.93199920654297,49.07400131225586 35.93199920654297,49.07400131225586 35.93199920654297,49.07400131225586 C39.801998138427734,49.07400131225586 42.93899917602539,45.93600082397461 42.93899917602539,42.064998626708984 C42.93899917602539,42.064998626708984 42.93899917602539,1.2829999923706055 42.93899917602539,1.2829999923706055 C42.93899917602539,-2.3380000591278076 40.19200134277344,-5.316999912261963 36.66899871826172,-5.685999870300293z"
+                    ></path>
+                  </g>
+                  <g
+                    opacity="1"
+                    transform="matrix(1,0,0,1,45.99800109863281,88.7239990234375)"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="miter"
+                      fill-opacity="0"
+                      stroke-miterlimit="10"
+                      stroke="currentColor"
+                      stroke-opacity="1"
+                      stroke-width="3.681"
+                      d=" M17.584999084472656,0.0010000000474974513 C17.584999084472656,9.711999893188477 9.711000442504883,17.584999084472656 -0.0010000000474974513,17.584999084472656 C-9.711999893188477,17.584999084472656 -17.584999084472656,9.711999893188477 -17.584999084472656,0.0010000000474974513 C-17.584999084472656,-9.711000442504883 -9.711999893188477,-17.584999084472656 -0.0010000000474974513,-17.584999084472656 C9.711000442504883,-17.584999084472656 17.584999084472656,-9.711000442504883 17.584999084472656,0.0010000000474974513z"
+                    ></path>
+                  </g>
+                </g>
+                <g
+                  transform="matrix(0,0,0,0,46.39699935913086,88.28099822998047)"
+                  opacity="1"
+                  style="display: block"
+                >
+                  <g
+                    opacity="1"
+                    transform="matrix(1,0,0,1,45.99800109863281,88.7239990234375)"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-opacity="1"
+                      d=" M17.584999084472656,0.0010000000474974513 C17.584999084472656,9.711999893188477 9.711000442504883,17.584999084472656 -0.0010000000474974513,17.584999084472656 C-9.711999893188477,17.584999084472656 -17.584999084472656,9.711999893188477 -17.584999084472656,0.0010000000474974513 C-17.584999084472656,-9.711000442504883 -9.711999893188477,-17.584999084472656 -0.0010000000474974513,-17.584999084472656 C9.711000442504883,-17.584999084472656 17.584999084472656,-9.711000442504883 17.584999084472656,0.0010000000474974513z"
+                    ></path>
+                  </g>
+                </g>
+                <g
+                  transform="matrix(1,0,0,1,0,0)"
+                  opacity="0.14093750000187286"
+                  style="display: block"
+                >
+                  <g
+                    opacity="1"
+                    transform="matrix(1,0,0,1,38.15999984741211,16.53499984741211)"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="miter"
+                      fill-opacity="0"
+                      stroke-miterlimit="10"
+                      stroke="currentColor"
+                      stroke-opacity="1"
+                      stroke-width="3.681"
+                      d=" M-4.390999794006348,-3.194000005722046 C-4.390999794006348,-3.194000005722046 4.390999794006348,3.194000005722046 4.390999794006348,3.194000005722046"
+                    ></path>
+                  </g>
+                  <g
+                    opacity="1"
+                    transform="matrix(1,0,0,1,38.15999984741211,42.29899978637695)"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="miter"
+                      fill-opacity="0"
+                      stroke-miterlimit="10"
+                      stroke="currentColor"
+                      stroke-opacity="1"
+                      stroke-width="3.681"
+                      d=" M-4.390999794006348,3.194000005722046 C-4.390999794006348,3.194000005722046 4.390999794006348,-3.194000005722046 4.390999794006348,-3.194000005722046"
+                    ></path>
+                  </g>
+                  <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="miter"
+                      fill-opacity="0"
+                      stroke-miterlimit="10"
+                      stroke="currentColor"
+                      stroke-opacity="1"
+                      stroke-width="3.681"
+                      d=" M30.224000930786133,29.426000595092773 C30.224000930786133,29.426000595092773 39.76599884033203,29.426000595092773 39.76599884033203,29.426000595092773"
+                    ></path>
+                  </g>
+                  <g
+                    opacity="1"
+                    transform="matrix(1,0,0,1,99.36000061035156,16.53499984741211)"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="miter"
+                      fill-opacity="0"
+                      stroke-miterlimit="10"
+                      stroke="currentColor"
+                      stroke-opacity="1"
+                      stroke-width="3.681"
+                      d=" M4.390999794006348,-3.194000005722046 C4.390999794006348,-3.194000005722046 -4.390999794006348,3.194000005722046 -4.390999794006348,3.194000005722046"
+                    ></path>
+                  </g>
+                  <g
+                    opacity="1"
+                    transform="matrix(1,0,0,1,99.36000061035156,42.29899978637695)"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="miter"
+                      fill-opacity="0"
+                      stroke-miterlimit="10"
+                      stroke="currentColor"
+                      stroke-opacity="1"
+                      stroke-width="3.681"
+                      d=" M4.390999794006348,3.194000005722046 C4.390999794006348,3.194000005722046 -4.390999794006348,-3.194000005722046 -4.390999794006348,-3.194000005722046"
+                    ></path>
+                  </g>
+                  <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="miter"
+                      fill-opacity="0"
+                      stroke-miterlimit="10"
+                      stroke="currentColor"
+                      stroke-opacity="1"
+                      stroke-width="3.681"
+                      d=" M107.29499816894531,29.426000595092773 C107.29499816894531,29.426000595092773 97.75299835205078,29.426000595092773 97.75299835205078,29.426000595092773"
+                    ></path>
+                  </g>
+                </g>
+                <g
+                  transform="matrix(1,0,0,1,0,0)"
+                  opacity="0.09395833333458199"
+                  style="display: block"
+                >
+                  <g
+                    opacity="1"
+                    transform="matrix(1,0,0,1,69.58100128173828,37.60599899291992)"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-opacity="1"
+                      d=" M7.617000102996826,11.065999984741211 C7.617000102996826,11.065999984741211 -7.618000030517578,11.065999984741211 -7.618000030517578,11.065999984741211 C-9.434000015258789,11.065999984741211 -10.904999732971191,9.593999862670898 -10.904999732971191,7.7779998779296875 C-10.904999732971191,7.7779998779296875 -10.904999732971191,-7.7769999504089355 -10.904999732971191,-7.7769999504089355 C-10.904999732971191,-9.593000411987305 -9.434000015258789,-11.065999984741211 -7.618000030517578,-11.065999984741211 C-7.618000030517578,-11.065999984741211 7.617000102996826,-11.065999984741211 7.617000102996826,-11.065999984741211 C9.432999610900879,-11.065999984741211 10.904999732971191,-9.593000411987305 10.904999732971191,-7.7769999504089355 C10.904999732971191,-7.7769999504089355 10.904999732971191,7.7779998779296875 10.904999732971191,7.7779998779296875 C10.904999732971191,9.593999862670898 9.432999610900879,11.065999984741211 7.617000102996826,11.065999984741211z"
+                    ></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <h2 class="bento-gallery-headline">
+            Un minuto, un segundo, un instante que queda en la eternidad
+          </h2>
         </div>
+        <!-- Bento Grid -->
+        <div class="bento-grid">
+          <!-- Large feature image (2 cols × 2 rows) -->
+          <div class="bento-item bento-large">
+            <img src="images/tybe.JPG" alt="Pedida de mano" loading="lazy" />
+          </div>
+          <!-- Top-right small image -->
+          <div class="bento-item bento-small">
+            <img
+              src="images/pedi2.jpeg"
+              alt="Pedida de mano 2"
+              loading="lazy"
+            />
+          </div>
+          <!-- Bottom-right small image -->
+          <div class="bento-item bento-small">
+            <img src="images/pedi3.JPG" alt="Pedida de mano 3" loading="lazy" />
+          </div>
+          <!-- Wide bottom tile: coming soon -->
+          <div class="bento-item bento-wide bento-coming-soon">
+            <span class="bento-cs-label">Próximamente</span>
+            <p class="bento-cs-text">
+              Las fotos de nuestra boda aparecerán aquí muy pronto
+            </p>
+          </div>
+        </div>
+
+        <!-- Upload for Guest photos -->
+        <div class="upload-trigger-row">
+          <button class="upload-trigger-wrap" id="upload-trigger-btn">
+            <p class="upload-eyebrow">Contribuye a nuestro álbum</p>
+            <div class="upload-trigger-btn">
+              <span class="upload-trigger-text">Sube tus Fotos</span>
+              <span class="material-symbols-outlined">upload_file</span>
+            </div>
+                          <p class="registry-subtext">Disponible el 28/11/2026         </p>
+
+          </button>
+        </div>
+        <!-- Display guest-uploaded photos -->
+        <div
+          class="gallery-subsection upload-subsection upload-subsection-compact"
+        >
+          <!-- Polaroid grid -->
+          <div class="guest-album-header">
+            <span class="guest-album-eyebrow">Álbum Colaborativo</span>
+          </div>
+          <div id="polaroid-grid" class="polaroid-grid">
+            <div class="no-photos-msg">
+              <span class="material-symbols-outlined no-photos-icon"
+                >photo_camera</span
+              >
+              <p>
+                Aún no hay fotos. ¡Ayúdanos a llenar este álbum de memorias!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Venue Map -->
     <section id="map" class="section-padding">
-        <div class="map-section-container">
-            <!-- Section header -->
-            <div class="map-section-header">
-                <span class="map-eyebrow">Ubicación</span>
-                <h2 class="map-headline">
-                    ¿Cómo llegar?
-                </h2>
-            </div>
-            <!-- Map Widget -->
-            <div class="event-map-widget">
-                <!-- Tabs -->
-                <div class="map-tabs">
-                    <button class="map-tab active" data-target="map-ceremony"
-                        data-label="Parroquia Sagrado Corazón de Jesús"
-                        data-sublabel="Cra. 53 # 48 - 04, Nte. Centro Historico, Barranquilla, Atlántico"
-                        data-btn-text="Abrir en Google Maps"
-                        data-btn-href="https://maps.app.goo.gl/nUUgKYgGMC46LW638"
-                        data-icon-class="primary">
-                        <svg class="map-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 10h14v11H5z" />
-                            <path d="M5 10l7-5 7 5" />
-                            <path d="M9 21V15a3 3 0 0 1 6 0v6" />
-                        </svg>
-                        Ceremonia
-                    </button>
-                    <button class="map-tab" data-target="map-reception" data-label="Hotel Genova"
-                        data-sublabel="Cl. 44 #44-66, Nte. Centro Historico, Barranquilla, Atlántico"
-                        data-btn-text="Abrir en Google Maps"
-                        data-btn-href="https://maps.app.goo.gl/oFhXtFHrUdmtwCYG8"
-                        data-icon-class="accent">
-                        <svg class="map-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z" />
-                            <circle cx="12" cy="10" r="3" />
-                        </svg>
-                        Recepción
-                    </button>
-                </div>
-                <!-- Iframes -->
-                <div class="map-frame-wrap">
-                    <iframe id="map-ceremony" class="visible" title="Parroquia Sagrado Corazón de Jesús"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.608871188544!2d-74.78824972548026!3d10.992866655165232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d7c0e5a8721%3A0x11a93b800c244008!2sParroquia%20Sagrado%20Coraz%C3%B3n%20de%20Jes%C3%BAs!5e0!3m2!1ses-419!2sco!4v1783732465980!5m2!1ses-419!2sco"
-                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    <iframe id="map-reception" title="Hotel Genova"
-                        data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.7129610107536!2d-74.78699252548031!3d10.98502495531247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d63a462df4f%3A0xd3221847d001bfd0!2sHotel%20Genova!5e0!3m2!1ses-419!2sco!4v1783732582010!5m2!1ses-419!2sco"
-                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-                <!-- Bottom bar -->
-                <div class="map-bar">
-                    <div class="map-info">
-                        <div class="map-icon" id="bar-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#004d08" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z" />
-                                <circle cx="12" cy="10" r="3" />
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="map-label" id="bar-label">
-                                Parroquia Sagrado Corazón de Jesús
-                            </div>
-                            <div class="map-sublabel" id="bar-sublabel">
-                                Cra. 53 # 48 - 04, Nte. Centro Historico, Barranquilla, Atlántico
-                            </div>
-                        </div>
-                    </div>
-                    <a class="map-btn-link" id="bar-btn"
-                        href="https://maps.app.goo.gl/nUUgKYgGMC46LW638"
-                        target="_blank" rel="noopener noreferrer">
-                        Abrir en Google Maps
-                    </a>
-                </div>
-            </div>
+      <div class="map-section-container">
+        <!-- Section header -->
+        <div class="map-section-header">
+          <span class="map-eyebrow">Ubicación</span>
+          <h2 class="map-headline">¿Cómo llegar?</h2>
         </div>
+        <!-- Map Widget -->
+        <div class="event-map-widget">
+          <!-- Tabs -->
+          <div class="map-tabs">
+            <button
+              class="map-tab active"
+              data-target="map-ceremony"
+              data-label="Parroquia Sagrado Corazón de Jesús"
+              data-sublabel="Cra. 53 # 48 - 04, Nte. Centro Historico, Barranquilla, Atlántico"
+              data-btn-text="Abrir en Google Maps"
+              data-btn-href="https://maps.app.goo.gl/nUUgKYgGMC46LW638"
+              data-icon-class="primary"
+            >
+              <svg
+                class="map-tab-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 10h14v11H5z" />
+                <path d="M5 10l7-5 7 5" />
+                <path d="M9 21V15a3 3 0 0 1 6 0v6" />
+              </svg>
+              Ceremonia
+            </button>
+            <button
+              class="map-tab"
+              data-target="map-reception"
+              data-label="Hotel Genova"
+              data-sublabel="Cl. 44 #44-66, Nte. Centro Historico, Barranquilla, Atlántico"
+              data-btn-text="Abrir en Google Maps"
+              data-btn-href="https://maps.app.goo.gl/oFhXtFHrUdmtwCYG8"
+              data-icon-class="accent"
+            >
+              <svg
+                class="map-tab-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Recepción
+            </button>
+          </div>
+          <!-- Iframes -->
+          <div class="map-frame-wrap">
+            <iframe
+              id="map-ceremony"
+              class="visible"
+              title="Parroquia Sagrado Corazón de Jesús"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.608871188544!2d-74.78824972548026!3d10.992866655165232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d7c0e5a8721%3A0x11a93b800c244008!2sParroquia%20Sagrado%20Coraz%C3%B3n%20de%20Jes%C3%BAs!5e0!3m2!1ses-419!2sco!4v1783732465980!5m2!1ses-419!2sco"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+            <iframe
+              id="map-reception"
+              title="Hotel Genova"
+              data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.7129610107536!2d-74.78699252548031!3d10.98502495531247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d63a462df4f%3A0xd3221847d001bfd0!2sHotel%20Genova!5e0!3m2!1ses-419!2sco!4v1783732582010!5m2!1ses-419!2sco"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+          <!-- Bottom bar -->
+          <div class="map-bar">
+            <div class="map-info">
+              <div class="map-icon" id="bar-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#004d08"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <div class="map-label" id="bar-label">
+                  Parroquia Sagrado Corazón de Jesús
+                </div>
+                <div class="map-sublabel" id="bar-sublabel">
+                  Cra. 53 # 48 - 04, Nte. Centro Historico, Barranquilla,
+                  Atlántico
+                </div>
+              </div>
+            </div>
+            <a
+              class="map-btn-link"
+              id="bar-btn"
+              href="https://maps.app.goo.gl/nUUgKYgGMC46LW638"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abrir en Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Gift Registry Section -->
     <section id="gifts" class="section-padding">
-        <div class="registry-section-container">
-                   
-         <!-- Section header -->
-            <div class="registry-section-header">
-                <span class="registry-eyebrow">Regalos</span>
-                 <div class="w-100">
-
-        <div class="anim-regalos">
-            <svg class="anim-regalos1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 114" width="96" height="114" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);"><defs><clipPath id="__lottie_element_156"><rect width="96" height="114" x="0" y="0"></rect></clipPath></defs><g clip-path="url(#__lottie_element_156)"><g transform="matrix(1,0,0,0.9399500489234924,0,6.4197235107421875)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,48.388999938964844,86.24800109863281)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(190,168,128)" stroke-opacity="1" stroke-width="3" d=" M27.260000228881836,-23.70400047302246 C27.260000228881836,-23.70400047302246 27.260000228881836,16.000999450683594 27.260000228881836,16.000999450683594 C27.260000228881836,20.2549991607666 23.81100082397461,23.70400047302246 19.55699920654297,23.70400047302246 C19.55699920654297,23.70400047302246 -19.55500030517578,23.70400047302246 -19.55500030517578,23.70400047302246 C-23.809999465942383,23.70400047302246 -27.260000228881836,20.2549991607666 -27.260000228881836,16.000999450683594 C-27.260000228881836,16.000999450683594 -27.260000228881836,-23.70400047302246 -27.260000228881836,-23.70400047302246 C-27.260000228881836,-23.70400047302246 27.260000228881836,-23.70400047302246 27.260000228881836,-23.70400047302246z"></path></g><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(190,168,128)" stroke-opacity="1" stroke-width="3" d=" M41.20399856567383,109.95099639892578 C41.20399856567383,109.95099639892578 41.20399856567383,62.395999908447266 41.20399856567383,62.395999908447266"></path></g><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(190,168,128)" stroke-opacity="1" stroke-width="3" d=" M54.5369987487793,62.61800003051758 C54.5369987487793,62.61800003051758 54.5369987487793,109.95099639892578 54.5369987487793,109.95099639892578"></path></g></g><g transform="matrix(1,0,0,0.9399500489234924,0,6.4197235107421875)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(190,168,128)" stroke-opacity="1" stroke-width="3" d=" M54.5369987487793,62.395999908447266 C54.5369987487793,62.395999908447266 54.5369987487793,44.84000015258789 54.5369987487793,44.84000015258789"></path></g><g opacity="1" transform="matrix(1,0,0,1,47.5,53.50699996948242)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(190,168,128)" stroke-opacity="1" stroke-width="3" d=" M30.309999465942383,9.036999702453613 C30.309999465942383,9.036999702453613 -30.30900001525879,9.036999702453613 -30.30900001525879,9.036999702453613 C-33.534000396728516,9.036999702453613 -36.14799880981445,6.421999931335449 -36.14799880981445,3.197000026702881 C-36.14799880981445,3.197000026702881 -36.14799880981445,-3.197999954223633 -36.14799880981445,-3.197999954223633 C-36.14799880981445,-6.422999858856201 -33.534000396728516,-9.036999702453613 -30.30900001525879,-9.036999702453613 C-30.30900001525879,-9.036999702453613 30.309999465942383,-9.036999702453613 30.309999465942383,-9.036999702453613 C33.53499984741211,-9.036999702453613 36.14799880981445,-6.422999858856201 36.14799880981445,-3.197999954223633 C36.14799880981445,-3.197999954223633 36.14799880981445,3.197000026702881 36.14799880981445,3.197000026702881 C36.14799880981445,6.421999931335449 33.53499984741211,9.036999702453613 30.309999465942383,9.036999702453613z"></path></g><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(190,168,128)" stroke-opacity="1" stroke-width="3" d=" M41.20399856567383,62.395999908447266 C41.20399856567383,62.395999908447266 41.20399856567383,44.84000015258789 41.20399856567383,44.84000015258789"></path></g></g><g transform="matrix(1,0,0,0.9399500489234924,0,6.4197235107421875)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,47.64699935913086,33.92300033569336)"><path stroke-linecap="round" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(190,168,128)" stroke-opacity="1" stroke-width="3" d=" M-4.88100004196167,-1.1790000200271606 C-7.974999904632568,-6.007999897003174 -12.866999626159668,-10.281000137329102 -20.489999771118164,-10.281000137329102 C-25.785999298095703,-10.281000137329102 -29.073999404907227,-8.190999984741211 -29.073999404907227,-4.820000171661377 C-29.073999404907227,1.3029999732971191 -19.075000762939453,9.696999549865723 -0.25999999046325684,10.281000137329102 C-0.25999999046325684,10.281000137329102 0.25999999046325684,10.281000137329102 0.25999999046325684,10.281000137329102 C19.075000762939453,9.696999549865723 29.073999404907227,1.3029999732971191 29.073999404907227,-4.820000171661377 C29.073999404907227,-8.190999984741211 25.785999298095703,-10.281000137329102 20.489999771118164,-10.281000137329102 C7.63700008392334,-10.281000137329102 2.546999931335449,1.8669999837875366 0.746999979019165,8.343999862670898"></path></g></g></g></svg></div>
-
-      </div>
-                <h2 class="registry-headline">
-                    Si deseas regalarnos algo más que tu hermosa presencia...
-                </h2>
-                <p class="registry-subtext">
-                    Hemos creado este QR de Bre-B para que puedan transferirnos. <br>
-                    No olvides enviarnos el comprobante para saber que fuiste tu...
-                </p>
+      <div class="registry-section-container">
+        <!-- Section header -->
+        <div class="registry-section-header">
+          <span class="registry-eyebrow">Regalos</span>
+          <div class="w-100">
+            <div class="anim-regalos">
+              <svg
+                class="anim-regalos1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 96 114"
+                width="96"
+                height="114"
+                preserveAspectRatio="xMidYMid meet"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  transform: translate3d(0px, 0px, 0px);
+                "
+              >
+                <defs>
+                  <clipPath id="__lottie_element_156">
+                    <rect width="96" height="114" x="0" y="0"></rect>
+                  </clipPath>
+                </defs>
+                <g clip-path="url(#__lottie_element_156)">
+                  <g
+                    transform="matrix(1,0,0,0.9399500489234924,0,6.4197235107421875)"
+                    opacity="1"
+                    style="display: block"
+                  >
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,48.388999938964844,86.24800109863281)"
+                    >
+                      <path
+                        stroke-linecap="butt"
+                        stroke-linejoin="miter"
+                        fill-opacity="0"
+                        stroke-miterlimit="10"
+                        stroke="rgb(190,168,128)"
+                        stroke-opacity="1"
+                        stroke-width="3"
+                        d=" M27.260000228881836,-23.70400047302246 C27.260000228881836,-23.70400047302246 27.260000228881836,16.000999450683594 27.260000228881836,16.000999450683594 C27.260000228881836,20.2549991607666 23.81100082397461,23.70400047302246 19.55699920654297,23.70400047302246 C19.55699920654297,23.70400047302246 -19.55500030517578,23.70400047302246 -19.55500030517578,23.70400047302246 C-23.809999465942383,23.70400047302246 -27.260000228881836,20.2549991607666 -27.260000228881836,16.000999450683594 C-27.260000228881836,16.000999450683594 -27.260000228881836,-23.70400047302246 -27.260000228881836,-23.70400047302246 C-27.260000228881836,-23.70400047302246 27.260000228881836,-23.70400047302246 27.260000228881836,-23.70400047302246z"
+                      ></path>
+                    </g>
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                      <path
+                        stroke-linecap="butt"
+                        stroke-linejoin="miter"
+                        fill-opacity="0"
+                        stroke-miterlimit="10"
+                        stroke="rgb(190,168,128)"
+                        stroke-opacity="1"
+                        stroke-width="3"
+                        d=" M41.20399856567383,109.95099639892578 C41.20399856567383,109.95099639892578 41.20399856567383,62.395999908447266 41.20399856567383,62.395999908447266"
+                      ></path>
+                    </g>
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                      <path
+                        stroke-linecap="butt"
+                        stroke-linejoin="miter"
+                        fill-opacity="0"
+                        stroke-miterlimit="10"
+                        stroke="rgb(190,168,128)"
+                        stroke-opacity="1"
+                        stroke-width="3"
+                        d=" M54.5369987487793,62.61800003051758 C54.5369987487793,62.61800003051758 54.5369987487793,109.95099639892578 54.5369987487793,109.95099639892578"
+                      ></path>
+                    </g>
+                  </g>
+                  <g
+                    transform="matrix(1,0,0,0.9399500489234924,0,6.4197235107421875)"
+                    opacity="1"
+                    style="display: block"
+                  >
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                      <path
+                        stroke-linecap="butt"
+                        stroke-linejoin="miter"
+                        fill-opacity="0"
+                        stroke-miterlimit="10"
+                        stroke="rgb(190,168,128)"
+                        stroke-opacity="1"
+                        stroke-width="3"
+                        d=" M54.5369987487793,62.395999908447266 C54.5369987487793,62.395999908447266 54.5369987487793,44.84000015258789 54.5369987487793,44.84000015258789"
+                      ></path>
+                    </g>
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,47.5,53.50699996948242)"
+                    >
+                      <path
+                        stroke-linecap="butt"
+                        stroke-linejoin="miter"
+                        fill-opacity="0"
+                        stroke-miterlimit="10"
+                        stroke="rgb(190,168,128)"
+                        stroke-opacity="1"
+                        stroke-width="3"
+                        d=" M30.309999465942383,9.036999702453613 C30.309999465942383,9.036999702453613 -30.30900001525879,9.036999702453613 -30.30900001525879,9.036999702453613 C-33.534000396728516,9.036999702453613 -36.14799880981445,6.421999931335449 -36.14799880981445,3.197000026702881 C-36.14799880981445,3.197000026702881 -36.14799880981445,-3.197999954223633 -36.14799880981445,-3.197999954223633 C-36.14799880981445,-6.422999858856201 -33.534000396728516,-9.036999702453613 -30.30900001525879,-9.036999702453613 C-30.30900001525879,-9.036999702453613 30.309999465942383,-9.036999702453613 30.309999465942383,-9.036999702453613 C33.53499984741211,-9.036999702453613 36.14799880981445,-6.422999858856201 36.14799880981445,-3.197999954223633 C36.14799880981445,-3.197999954223633 36.14799880981445,3.197000026702881 36.14799880981445,3.197000026702881 C36.14799880981445,6.421999931335449 33.53499984741211,9.036999702453613 30.309999465942383,9.036999702453613z"
+                      ></path>
+                    </g>
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                      <path
+                        stroke-linecap="butt"
+                        stroke-linejoin="miter"
+                        fill-opacity="0"
+                        stroke-miterlimit="10"
+                        stroke="rgb(190,168,128)"
+                        stroke-opacity="1"
+                        stroke-width="3"
+                        d=" M41.20399856567383,62.395999908447266 C41.20399856567383,62.395999908447266 41.20399856567383,44.84000015258789 41.20399856567383,44.84000015258789"
+                      ></path>
+                    </g>
+                  </g>
+                  <g
+                    transform="matrix(1,0,0,0.9399500489234924,0,6.4197235107421875)"
+                    opacity="1"
+                    style="display: block"
+                  >
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,47.64699935913086,33.92300033569336)"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="miter"
+                        fill-opacity="0"
+                        stroke-miterlimit="10"
+                        stroke="rgb(190,168,128)"
+                        stroke-opacity="1"
+                        stroke-width="3"
+                        d=" M-4.88100004196167,-1.1790000200271606 C-7.974999904632568,-6.007999897003174 -12.866999626159668,-10.281000137329102 -20.489999771118164,-10.281000137329102 C-25.785999298095703,-10.281000137329102 -29.073999404907227,-8.190999984741211 -29.073999404907227,-4.820000171661377 C-29.073999404907227,1.3029999732971191 -19.075000762939453,9.696999549865723 -0.25999999046325684,10.281000137329102 C-0.25999999046325684,10.281000137329102 0.25999999046325684,10.281000137329102 0.25999999046325684,10.281000137329102 C19.075000762939453,9.696999549865723 29.073999404907227,1.3029999732971191 29.073999404907227,-4.820000171661377 C29.073999404907227,-8.190999984741211 25.785999298095703,-10.281000137329102 20.489999771118164,-10.281000137329102 C7.63700008392334,-10.281000137329102 2.546999931335449,1.8669999837875366 0.746999979019165,8.343999862670898"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
             </div>
-            <!-- Registry cards -->
-            <div class="registry-grid">
-                <!-- PayPal (Flip Card) -->
-                <div class="">
-                    <div class="flip-card-inner">
-                        <!-- Front Face -->
-                        <a class="registry-card" href="https://www.paypal.com/paypalme/joseYkarla181226"
-                            target="_blank" rel="noopener noreferrer">
-                            <div class="gold-corner tl"></div>
-                            <div class="gold-corner tr"></div>
-                            <div class="gold-corner bl"></div>
-                            <div class="gold-corner br"></div>
-                            <div class="registry-card-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">payments</span>
-                            </div>
-                            <div class="registry-card-body">
-                                <span class="registry-card-name">PayPal</span>
-                                <span class="registry-card-sub">Transferencia directa</span>
-                            </div>
-                            <span class="registry-card-cta">
-                                Enviar regalo
-                                <svg class="registry-card-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor"
-                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 8h10M9 4l4 4-4 4" />
-                                </svg>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <h2 class="registry-headline">
+            Si deseas regalarnos algo más que tu hermosa presencia...
+          </h2>
+          <p class="registry-subtext">
+            Hemos creado este QR de Bre-B para que puedan transferirnos. <br />
+            No olvides enviarnos el comprobante para saber que fuiste tu...
+          </p>
         </div>
+        <!-- Registry cards -->
+      
+        <div class="registry-grid">
+        
+<!-- Bre-B -->
+<div class="breb-card">
+
+  <div class="gold-corner tl"></div>
+  <div class="gold-corner tr"></div>
+  <div class="gold-corner bl"></div>
+  <div class="gold-corner br"></div>
+
+  <span class="breb-card-title">
+    Bre-B
+  </span>
+
+  <span class="breb-card-sub">
+    Transferencia directa
+  </span>
+
+  <!-- QR -->
+  <div class="breb-card-qr">
+    <img
+      src="images/QR_B&A.png"
+      alt="Código QR de Bre-B"
+    />
+  </div>
+
+  <!-- Llave -->
+  <div class="breb-card-key">
+
+    <span class="breb-card-key-label">
+      Llave Bre-B
+    </span>
+
+    <span class="breb-card-key-value">
+      @POM882
+    </span>
+
+  </div>
+
+  <span class="breb-card-cta">
+    Escanea el QR o utiliza nuestra llave
+  </span>
+
+</div>
+
+
+
+
+
+        </div>
+      </div>
     </section>
 
     <!-- RSVP Section -->
     <section id="rsvp" class="rsvp-section">
-        <!-- RSVP Confirmation Modal -->
-        <div id="rsvp-modal" class="gifts-modal" tabindex="-1" role="dialog" aria-labelledby="rsvp-modal-title"
-            aria-modal="true">
-            <div class="gifts-modal-content rsvp-modal-content">
-                <button type="button" class="gifts-modal-close" id="close-rsvp-modal-btn">
-                    <span class="material-symbols-outlined">close</span>
-                </button>
-                <img src="images/A&B1.png" alt="Antonio & Belsy" class="rsvp-modal-logo">
-                <h3 id="rsvp-modal-title" class="gifts-modal-title" tabindex="-1">
-                    ¡Gracias!
-                </h3>
-                <p class="gifts-modal-subtitle">
-                    Nos alegra mucho que confirmes tu asistencia en nuestro gran día.
-                </p>
-                <div id="add-to-cal" class="mt-20"></div>
-            </div>
+      <!-- RSVP Confirmation Modal -->
+      <div
+        id="rsvp-modal"
+        class="gifts-modal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="rsvp-modal-title"
+        aria-modal="true"
+      >
+        <div class="gifts-modal-content rsvp-modal-content">
+          <button
+            type="button"
+            class="gifts-modal-close"
+            id="close-rsvp-modal-btn"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+          <img
+            src="images/A&B1.png"
+            alt="Antonio & Belsy"
+            class="rsvp-modal-logo"
+          />
+          <h3 id="rsvp-modal-title" class="gifts-modal-title" tabindex="-1">
+            ¡Gracias!
+          </h3>
+          <p class="gifts-modal-subtitle">
+            Nos alegra mucho que confirmes tu asistencia en nuestro gran día.
+          </p>
+          <div id="add-to-cal" class="mt-20"></div>
         </div>
-        <!-- RSVP Content -->
-        <div class="rsvp-section-container">
-            <!-- Section Header -->
-            <div class="rsvp-section-header">
-                <p class="rsvp-eyebrow">Celebra con nosotros</p>
-                <h2 class="rsvp-title">Confirma tu Asistencia</h2>
-            </div>
-            <!-- RSVP Form -->
-            <div class="rsvp-card-wrapper">
-                <div id="rsvp-search-container">
-                    <div class="event-card rsvp-card">
-                        <div class="gold-corner tl"></div>
-                        <div class="gold-corner tr"></div>
-                        <div class="gold-corner bl"></div>
-                        <div class="gold-corner br"></div>
-                        <div class="card-body">
-                            <div class="card-header-row">
-                                <h3 class="card-title">
-                                    Busca tu Invitación
-                                </h3>
-                                <span class="card-icon"><span class="material-symbols-outlined">mail</span></span>
-                            </div>
-                            <div class="card-divider"></div>
-                            <div class="info-list">
-                                <div class="info-row">
-                                    <span class="info-icon"><span class="material-symbols-outlined">info</span></span>
-                                    <div>
-                                        <p class="info-sub">
-                                            Ingresa tus datos para confirmar tu asistencia.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="info-row">
-                                    <span class="info-icon"><span
-                                            class="material-symbols-outlined">calendar_today</span></span>
-                                    <div>
-                                        <p class="info-sub">
-                                            Confirma a más tardar el <strong class="rsvp-deadline-strong">1° de
-                                                Octubre</strong>.
-                                            <span id="rsvp-deadline-countdown" class="rsvp-deadline-countdown"
-                                                aria-live="polite"></span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <form id="rsvp-search-form" class="rsvp-form" novalidate>
-                                <div class="row rsvp-form-row">
-                                    <div class="col-md-12">
-                                        <div class="form-input-group">
-                                            <span class="material-symbols-outlined">person</span>
-                                            <input type="text" name="name" id="rsvp-search-name" placeholder="Nombre"
-                                                required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row rsvp-form-row">
-                                    <div class="col-6">
-                                        <div class="form-input-group">
-                                            <span class="material-symbols-outlined">mail</span>
-                                            <input type="email" name="email" id="rsvp-search-email" placeholder="Correo"
-                                                autocomplete="email" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-input-group">
-                                            <span class="material-symbols-outlined">key</span>
-                                            <input type="text" name="groupCode" id="rsvp-group-code"
-                                                placeholder="Código" autocomplete="off" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12" id="alert-wrapper"></div>
-                                </div>
-                                <div class="card-actions rsvp-card-actions">
-                                    <button type="submit" class="rsvp-submit-btn">
-                                        <span class="material-symbols-outlined">search</span> Buscar mi Invitación
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+      </div>
+
+      <div
+        id="confirmation-modal"
+        class="gifts-modal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="confirmation-modal-title"
+        aria-modal="true"
+      >
+        <div class="gifts-modal-content upload-modal-content">
+          <div class="upload-modal-body">
+            <div class="upload-form-card">
+              <div class="gold-corner tl"></div>
+              <div class="gold-corner tr"></div>
+              <div class="gold-corner bl"></div>
+              <div class="gold-corner br"></div>
+
+              <div class="card-body">
+                <div
+                  class="card-header-row"
+                  style="text-align: center; display: block"
+                >
+                  <h3
+                    id="confirmation-modal-title"
+                    class="card-title"
+                    tabindex="-1"
+                  >
+                    ¡Asistencia confirmada!
+                  </h3>
                 </div>
-                <!-- Guest List Card -->
-                <div id="rsvp-guest-list">
-                    <div class="event-card rsvp-card">
-                        <div class="gold-corner tl"></div>
-                        <div class="gold-corner tr"></div>
-                        <div class="gold-corner bl"></div>
-                        <div class="gold-corner br"></div>
-                        <div class="card-body">
-                            <div class="card-header-row">
-                                <h3 class="card-title">
-                                    Grupo: <span id="group-name"></span>
-                                </h3>
-                                <span class="card-icon"><span class="material-symbols-outlined">group</span></span>
-                            </div>
-                            <div class="card-divider"></div>
-                            <div class="info-list">
-                                <div class="info-row">
-                                    <span class="info-icon"><span
-                                            class="material-symbols-outlined">check_box</span></span>
-                                    <div>
-                                        <p class="info-sub">
-                                            Marca la asistencia de cada invitado en el grupo.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="guests-container" class="guests-container"></div>
-                            <div id="confirm-alert-wrapper" class="mt-20"></div>
-                            <div class="card-actions rsvp-card-actions mt-20">
-                                <button id="confirm-attendance-btn" class="rsvp-submit-btn">
-                                    <span class="material-symbols-outlined">check</span> Confirmar Asistencias
-                                </button>
-                                <button id="back-to-search-btn" class="rsvp-secondary-btn">
-                                    <span class="material-symbols-outlined">arrow_back</span> Buscar Otra
-                                </button>
-                            </div>
-                        </div>
+
+                <div class="card-divider"></div>
+
+                <div class="info-list">
+                  <div class="info-row">
+                    <div>
+                      <p class="info-sub-asis info-sub">Recuerda</p>
+                      <ul>
+                        <li>No se permiten niños en la celebración.</li>
+                        <li>Esta invitación es personal e intransferible.</li>
+                      </ul>
+                      <strong>¡Preparate para hacer un desmadre!</strong>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+
+      <!-- RSVP Content -->
+      <div class="rsvp-section-container">
+        <!-- Section Header -->
+        <div class="rsvp-section-header">
+          <p class="rsvp-eyebrow">Celebra con nosotros</p>
+        </div>
+        <!-- RSVP Form -->
+        <div class="rsvp-card-wrapper">
+          <div id="rsvp-search-container">
+            <div class="event-card rsvp-card">
+              <div class="gold-corner tl"></div>
+              <div class="gold-corner tr"></div>
+              <div class="gold-corner bl"></div>
+              <div class="gold-corner br"></div>
+              <div class="card-body">
+                <div class="card-header-row">
+                  <h3 class="card-title">Confirma tu asistencia</h3>
+                  <span class="card-icon"
+                    ><span class="material-symbols-outlined"
+                      >check_circle</span
+                    ></span
+                  >
+                </div>
+                <div class="card-divider"></div>
+                <div class="info-list">
+                  <div class="info-row">
+                    <span class="info-icon"
+                      ><span class="material-symbols-outlined">info</span></span
+                    >
+                    <div>
+                      <p class="info-sub-asis info-sub">
+                        <strong
+                          >Informamos que los niños no están permitidos en la
+                          celebración, sin excepción alguna.</strong
+                        >
+                      </p>
+                    </div>
+                  </div>
+                  <div class="info-row">
+                    <span class="info-icon"
+                      ><span class="material-symbols-outlined"
+                        >calendar_today</span
+                      ></span
+                    >
+                    <div>
+                      <p class="info-sub-asis info-sub">
+                        Confirma a más tardar el
+                        <strong class="rsvp-deadline-strong"
+                          >28° de Septiembre</strong
+                        >.
+                        <span
+                          id="rsvp-deadline-countdown"
+                          class="rsvp-deadline-countdown"
+                          aria-live="polite"
+                        ></span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <form id="rsvp-search-form" class="rsvp-form" novalidate>
+                  <div id="companionsConfirm" class="row rsvp-form-row">
+                    <p class="info-sub-asis info-sub">
+                      <strong> Selecciona los invitados a confirmar: </strong>
+                    </p>
+                    <br />
+                    <div class="col-md-12">
+                      <div id="companions-list"></div>
+                    </div>
+                  </div>
+
+                  <div class="card-actions rsvp-card-actions">
+                    <button type="submit" class="rsvp-submit-btn" id="rsvp-confirm-btn">
+                      <span class="material-symbols-outlined">approval</span>
+                      <span class="rsvp-btn-text">Confirmar</span>
+                    </button>
+                  </div>
+                </form>
+                <div
+                  id="confirmation-message"
+                  class="confirmation-message"
+                  style="display: none"
+                >
+                  <span class="material-symbols-outlined">check_circle</span>
+
+                  <p>
+                    Tu asistencia ya fue confirmada.<br />
+                    ¡Te esperamos!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Guest List Card -->
+          <div id="rsvp-guest-list">
+            <div class="event-card rsvp-card">
+              <div class="gold-corner tl"></div>
+              <div class="gold-corner tr"></div>
+              <div class="gold-corner bl"></div>
+              <div class="gold-corner br"></div>
+              <div class="card-body">
+                <div class="card-header-row">
+                  <h3 class="card-title">
+                    Grupo: <span id="group-name"></span>
+                  </h3>
+                  <span class="card-icon"
+                    ><span class="material-symbols-outlined">group</span></span
+                  >
+                </div>
+                <div class="card-divider"></div>
+                <div class="info-list">
+                  <div class="info-row">
+                    <span class="info-icon"
+                      ><span class="material-symbols-outlined"
+                        >check_box</span
+                      ></span
+                    >
+                    <div>
+                      <p class="info-sub">
+                        Marca la asistencia de cada invitado en el grupo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div id="guests-container" class="guests-container"></div>
+                <div id="confirm-alert-wrapper" class="mt-20"></div>
+                <div class="card-actions rsvp-card-actions mt-20">
+                  <button id="confirm-attendance-btn" class="rsvp-submit-btn">
+                    <span class="material-symbols-outlined">check</span>
+                    Confirmar Asistencias
+                  </button>
+                  <button id="back-to-search-btn" class="rsvp-secondary-btn">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    Buscar Otra
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 text-center content">
-                    <span class="to-top-wrapper"><a href="#top" class="to-top"><span
-                                class="material-symbols-outlined">keyboard_arrow_up</span></a></span>
-                    <br>
-                    <img src="images/logblanco.png" alt="Antonio & Belsy" id="logo2-blanco">
-                    <p class="footer-credit">
-                        Hecho con <span class="material-symbols-outlined footer-heart">favorite</span> por Antonio y Belsy.
-                    </p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center content">
+            <span class="to-top-wrapper"
+              ><a href="#top" class="to-top"
+                ><span class="material-symbols-outlined"
+                  >keyboard_arrow_up</span
+                ></a
+              ></span
+            >
+            <br />
+            <img
+              src="images/logblanco.png"
+              alt="Antonio & Belsy"
+              id="logo2-blanco"
+            />
+            <p class="footer-credit">
+              Hecho con
+              <span class="material-symbols-outlined footer-heart"
+                >favorite</span
+              >
+              por Antonio y Belsy.
+            </p>
+          </div>
         </div>
+      </div>
     </footer>
 
     <!-- Upload Photos Modal -->
-    <div id="upload-modal" class="gifts-modal" tabindex="-1" role="dialog" aria-labelledby="upload-modal-title"
-        aria-modal="true">
+    <div id="" class="gifts-modal" tabindex="-1" role="dialog" aria-labelledby="upload-modal-title" aria-modal="true">
         <div class="gifts-modal-content upload-modal-content">
             <!-- Close row — never scrolls -->
             <div class="upload-modal-close-row">
@@ -871,20 +1476,19 @@
                                 </div>
                             </div>
                         </div>
-                        <form id="photo-upload-form" class="upload-form-inner" novalidate>
+                        <form id="photo-upload-form" class="upload-form-inner" novalidate="">
                             <!-- Nombre y Código -->
                             <div class="row rsvp-form-row">
                                 <div class="col-6">
                                     <div class="form-input-group">
                                         <span class="material-symbols-outlined">person</span>
-                                        <input type="text" id="guest-name" placeholder="Nombre" required>
+                                        <input type="text" id="guest-name" placeholder="Nombre" required="">
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-input-group">
                                         <span class="material-symbols-outlined">key</span>
-                                        <input type="text" id="gallery-group-code" placeholder="Código"
-                                            autocomplete="off" required>
+                                        <input type="text" id="gallery-group-code" placeholder="Código" autocomplete="off" required="">
                                     </div>
                                 </div>
                             </div>
@@ -894,7 +1498,7 @@
                                     <label for="photo-file" class="file-upload-label">
                                         <span class="material-symbols-outlined">add_photo_alternate</span> Seleccionar
                                         foto(s)
-                                        <input type="file" id="photo-file" accept="image/*" multiple>
+                                        <input type="file" id="photo-file" accept="image/*" multiple="">
                                     </label>
                                     <p class="file-info" id="file-info">
                                         Ningún archivo seleccionado
@@ -915,71 +1519,151 @@
     </div>
 
     <!-- Photo lightbox -->
-    <div id="photo-lightbox" class="photo-lightbox" role="dialog" aria-modal="true" aria-label="Visor de fotos">
-        <button class="lightbox-close" id="lightbox-close-btn" aria-label="Cerrar visor de fotos">×</button>
-        <div class="lightbox-content">
-            <!-- alt is set dynamically in openPhotoLightbox() -->
-            <img id="lightbox-img" src="" alt="">
-            <p id="lightbox-caption" class="lightbox-caption" aria-live="polite"></p>
-        </div>
+    <div
+      id="photo-lightbox"
+      class="photo-lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Visor de fotos"
+    >
+      <button
+        class="lightbox-close"
+        id="lightbox-close-btn"
+        aria-label="Cerrar visor de fotos"
+      >
+        ×
+      </button>
+      <div class="lightbox-content">
+        <!-- alt is set dynamically in openPhotoLightbox() -->
+        <img id="lightbox-img" src="" alt="" />
+        <p
+          id="lightbox-caption"
+          class="lightbox-caption"
+          aria-live="polite"
+        ></p>
+      </div>
     </div>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
-        defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+      defer
+    ></script>
     <!-- QR Code Generator JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"
-        integrity="sha384-mZT2gIty7ZDdOGkxfP6joZcYdMW1Jvj9dRlfpTmaJAKKXTqzygtB22k7FLe+KZC1"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"
+      integrity="sha384-mZT2gIty7ZDdOGkxfP6joZcYdMW1Jvj9dRlfpTmaJAKKXTqzygtB22k7FLe+KZC1"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- MUSIC PLAYER — fixed to bottom bar -->
     <audio id="audio-player" preload="none"></audio>
     <div id="music-player-bar">
-        <!-- Track info -->
-        <div class="mpb-track">
-            <div class="mpb-track-icon">
-                <span class="material-symbols-outlined">music_note</span>
-            </div>
-            <div class="mpb-track-text">
-                <span id="track-title" aria-live="polite" aria-atomic="true">Sin canción</span>
-                <span id="track-artist">Selecciona una canción</span>
-            </div>
+      <!-- Track info -->
+      <div class="mpb-track">
+        <div class="mpb-track-icon">
+          <span class="material-symbols-outlined">music_note</span>
         </div>
-        <!-- Controls + progress -->
-        <div class="mpb-controls">
-            <div class="mpb-buttons">
-                <button class="mpb-btn mpb-btn-sec" id="prev-btn" title="Anterior" aria-label="Canción anterior">
-                    <span class="material-symbols-outlined">skip_previous</span>
-                </button>
-                <button class="mpb-btn mpb-btn-play" id="play-pause-btn" title="Reproducir" aria-label="Reproducir">
-                    <span class="material-symbols-outlined">play_circle</span>
-                </button>
-                <button class="mpb-btn mpb-btn-sec" id="next-btn" title="Siguiente" aria-label="Siguiente canción">
-                    <span class="material-symbols-outlined">skip_next</span>
-                </button>
-            </div>
-            <div class="mpb-progress-row">
-                <span id="current-time" class="mpb-time">0:00</span>
-                <div class="mpb-progress-track progress-bar">
-                    <div id="progress-fill"></div>
-                </div>
-                <span id="duration" class="mpb-time">0:00</span>
-            </div>
+        <div class="mpb-track-text">
+          <span id="track-title" aria-live="polite" aria-atomic="true"
+            >Sin canción</span
+          >
+          <span id="track-artist">Selecciona una canción</span>
         </div>
-        <!-- Volume -->
-        <div class="mpb-volume">
-            <button class="mpb-btn" id="volume-btn" title="Silenciar" aria-label="Silenciar">
-                <span id="vol-icon" class="material-symbols-outlined">volume_up</span>
-            </button>
-            <input type="range" id="volume-slider" class="mpb-vol-slider" min="0" max="100" value="50"
-                aria-label="Volumen">
+      </div>
+      <!-- Controls + progress -->
+      <div class="mpb-controls">
+        <div class="mpb-buttons">
+          <button
+            class="mpb-btn mpb-btn-sec"
+            id="prev-btn"
+            title="Anterior"
+            aria-label="Canción anterior"
+          >
+            <span class="material-symbols-outlined">skip_previous</span>
+          </button>
+          <button
+            class="mpb-btn mpb-btn-play"
+            id="play-pause-btn"
+            title="Reproducir"
+            aria-label="Reproducir"
+          >
+            <span class="material-symbols-outlined">play_circle</span>
+          </button>
+          <button
+            class="mpb-btn mpb-btn-sec"
+            id="next-btn"
+            title="Siguiente"
+            aria-label="Siguiente canción"
+          >
+            <span class="material-symbols-outlined">skip_next</span>
+          </button>
         </div>
-
+        <div class="mpb-progress-row">
+          <span id="current-time" class="mpb-time">0:00</span>
+          <div class="mpb-progress-track progress-bar">
+            <div id="progress-fill"></div>
+          </div>
+          <span id="duration" class="mpb-time">0:00</span>
+        </div>
+      </div>
+      <!-- Volume -->
+      <div class="mpb-volume">
+        <button
+          class="mpb-btn"
+          id="volume-btn"
+          title="Silenciar"
+          aria-label="Silenciar"
+        >
+          <span id="vol-icon" class="material-symbols-outlined">volume_up</span>
+        </button>
+        <input
+          type="range"
+          id="volume-slider"
+          class="mpb-vol-slider"
+          min="0"
+          max="100"
+          value="50"
+          aria-label="Volumen"
+        />
+      </div>
     </div>
 
-    <script src="js/scripts.js"></script>
-    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script></body>
 
+    <!-- Modal Paleta de Colores -->
+<div id="palette-modal" class="palette-modal" aria-hidden="true">
+
+  <div class="palette-modal-overlay"></div>
+
+  <div class="palette-modal-content" role="dialog" aria-modal="true">
+
+    <button
+      id="close-palette"
+      type="button"
+      class="palette-modal-close"
+      aria-label="Cerrar"
+    >
+      ×
+    </button>
+
+    <img
+      src="images/ChatGPT Image 29 ago 2026, 00_14_45.png"
+      alt="Paleta de colores Boda A&B"
+      class="palette-modal-image"
+    />
+
+  </div>
+
+</div>
+
+    <script src="js/scripts.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
