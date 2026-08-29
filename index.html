@@ -198,7 +198,6 @@
       aria-modal="true"
     >
       <div class="gifts-modal-content upload-modal-content">
-      
         <div class="upload-modal-body">
           <!-- Form card — event-card structure -->
           <div class="upload-form-card">
@@ -293,7 +292,9 @@
                 </ul>
 
                 <!-- Acompañantes -->
-                <div id="acompanantes-info" class="acompanantes-info">(1 acompañante)</div>
+                <div id="acompanantes-info" class="acompanantes-info">
+                  (1 acompañante)
+                </div>
 
                 <!-- Lista de invitados -->
                 <ul id="listaInvitados" class="lista-invitados"></ul>
@@ -560,8 +561,7 @@
                 <div>
                   <p class="info-label">Mujeres:</p>
                   <p class="info-sub">
-                    Vestido largo y elegante.
-                    Tonos pastel empolvados y suaves.
+                    Vestido largo y elegante. Tonos pastel empolvados y suaves.
                   </p>
                 </div>
                 <span class="info-icon"
@@ -570,15 +570,23 @@
                 <div>
                   <p class="info-label">Hombres:</p>
                   <p class="info-sub">
-               Camisa formal de manga larga y pantalón clásico elegante.                  </p>
+                    Camisa formal de manga larga y pantalón clásico elegante.
+                  </p>
                 </div>
               </div>
               <p class="info-sub protocols-note">
-                "Les invitamos a vestir en tonos pastel empolvados y suaves. Agradecemos evitar blanco, crema, arena, beige y tonos verdes, reservados para la decoración y los novios."
+                "Les invitamos a vestir en tonos pastel empolvados y suaves"
+              </p>
+              <p class="info-label">
+                Colores reservados:
+              </p>
+              <p class="info-sub">
+                Agradecemos evitar blanco, crema, arena, beige y tonos verdes,
+                reservados para la decoración y los novios.
               </p>
               <button id="palette-btn" type="button" class="palette-btn">
-  Ver paleta de colores permitidos
-</button>
+                Ver paleta de colores permitidos
+              </button>
             </div>
           </div>
         </div>
@@ -832,8 +840,7 @@
               <span class="upload-trigger-text">Sube tus Fotos</span>
               <span class="material-symbols-outlined">upload_file</span>
             </div>
-                          <p class="registry-subtext">Disponible el 28/11/2026         </p>
-
+            <p class="registry-subtext">Disponible el 28/11/2026</p>
           </button>
         </div>
         <!-- Display guest-uploaded photos -->
@@ -1131,56 +1138,35 @@
           </p>
         </div>
         <!-- Registry cards -->
-      
+
         <div class="registry-grid">
-        
-<!-- Bre-B -->
-<div class="breb-card">
+          <!-- Bre-B -->
+          <div class="breb-card">
+            <div class="gold-corner tl"></div>
+            <div class="gold-corner tr"></div>
+            <div class="gold-corner bl"></div>
+            <div class="gold-corner br"></div>
 
-  <div class="gold-corner tl"></div>
-  <div class="gold-corner tr"></div>
-  <div class="gold-corner bl"></div>
-  <div class="gold-corner br"></div>
+            <span class="breb-card-title"> Bre-B </span>
 
-  <span class="breb-card-title">
-    Bre-B
-  </span>
+            <span class="breb-card-sub"> Transferencia directa </span>
 
-  <span class="breb-card-sub">
-    Transferencia directa
-  </span>
+            <!-- QR -->
+            <div class="breb-card-qr">
+              <img src="images/QR_B&A.png" alt="Código QR de Bre-B" />
+            </div>
 
-  <!-- QR -->
-  <div class="breb-card-qr">
-    <img
-      src="images/QR_B&A.png"
-      alt="Código QR de Bre-B"
-    />
-  </div>
+            <!-- Llave -->
+            <div class="breb-card-key">
+              <span class="breb-card-key-label"> Llave Bre-B </span>
 
-  <!-- Llave -->
-  <div class="breb-card-key">
+              <span class="breb-card-key-value"> @POM882 </span>
+            </div>
 
-    <span class="breb-card-key-label">
-      Llave Bre-B
-    </span>
-
-    <span class="breb-card-key-value">
-      @POM882
-    </span>
-
-  </div>
-
-  <span class="breb-card-cta">
-    Escanea el QR o utiliza nuestra llave
-  </span>
-
-</div>
-
-
-
-
-
+            <span class="breb-card-cta">
+              Escanea el QR o utiliza nuestra llave
+            </span>
+          </div>
         </div>
       </div>
     </section>
@@ -1340,7 +1326,11 @@
                   </div>
 
                   <div class="card-actions rsvp-card-actions">
-                    <button type="submit" class="rsvp-submit-btn" id="rsvp-confirm-btn">
+                    <button
+                      type="submit"
+                      class="rsvp-submit-btn"
+                      id="rsvp-confirm-btn"
+                    >
                       <span class="material-symbols-outlined">approval</span>
                       <span class="rsvp-btn-text">Confirmar</span>
                     </button>
@@ -1442,81 +1432,121 @@
     </footer>
 
     <!-- Upload Photos Modal -->
-    <div id="" class="gifts-modal" tabindex="-1" role="dialog" aria-labelledby="upload-modal-title" aria-modal="true">
-        <div class="gifts-modal-content upload-modal-content">
-            <!-- Close row — never scrolls -->
-            <div class="upload-modal-close-row">
-                <button type="button" class="gifts-modal-close" id="close-upload-modal-btn">
-                    <span class="material-symbols-outlined">close</span>
-                </button>
-            </div>
-            <!-- Scrollable body -->
-            <div class="upload-modal-body">
-                <!-- Form card — event-card structure -->
-                <div class="upload-form-card">
-                    <div class="gold-corner tl"></div>
-                    <div class="gold-corner tr"></div>
-                    <div class="gold-corner bl"></div>
-                    <div class="gold-corner br"></div>
-                    <div class="card-body">
-                        <div class="card-header-row">
-                            <h3 id="upload-modal-title" class="card-title" tabindex="-1">
-                                Comparte tus Fotos
-                            </h3>
-                            <span class="card-icon"><span class="material-symbols-outlined">photo_camera</span></span>
-                        </div>
-                        <div class="card-divider"></div>
-                        <div class="info-list">
-                            <div class="info-row">
-                                <span class="info-icon"><span class="material-symbols-outlined">image</span></span>
-                                <div>
-                                    <p class="info-sub">
-                                        Comparte los momentos que capturaste durante nuestra celebración. Máx. 5 MB por
-                                        foto (JPG, PNG, WEBP, GIF).
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <form id="photo-upload-form" class="upload-form-inner" novalidate="">
-                            <!-- Nombre y Código -->
-                            <div class="row rsvp-form-row">
-                                <div class="col-6">
-                                    <div class="form-input-group">
-                                        <span class="material-symbols-outlined">person</span>
-                                        <input type="text" id="guest-name" placeholder="Nombre" required="">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-input-group">
-                                        <span class="material-symbols-outlined">key</span>
-                                        <input type="text" id="gallery-group-code" placeholder="Código" autocomplete="off" required="">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Selector de archivos -->
-                            <div class="row rsvp-form-row">
-                                <div class="col-md-12">
-                                    <label for="photo-file" class="file-upload-label">
-                                        <span class="material-symbols-outlined">add_photo_alternate</span> Seleccionar
-                                        foto(s)
-                                        <input type="file" id="photo-file" accept="image/*" multiple="">
-                                    </label>
-                                    <p class="file-info" id="file-info">
-                                        Ningún archivo seleccionado
-                                    </p>
-                                </div>
-                            </div>
-                            <div id="upload-alert" role="alert" aria-live="polite"></div>
-                            <div class="card-actions upload-card-actions">
-                                <button type="submit" class="upload-submit-btn">
-                                    <span class="material-symbols-outlined">upload</span> Subir Fotos
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+    <div
+      id=""
+      class="gifts-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="upload-modal-title"
+      aria-modal="true"
+    >
+      <div class="gifts-modal-content upload-modal-content">
+        <!-- Close row — never scrolls -->
+        <div class="upload-modal-close-row">
+          <button
+            type="button"
+            class="gifts-modal-close"
+            id="close-upload-modal-btn"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
         </div>
+        <!-- Scrollable body -->
+        <div class="upload-modal-body">
+          <!-- Form card — event-card structure -->
+          <div class="upload-form-card">
+            <div class="gold-corner tl"></div>
+            <div class="gold-corner tr"></div>
+            <div class="gold-corner bl"></div>
+            <div class="gold-corner br"></div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 id="upload-modal-title" class="card-title" tabindex="-1">
+                  Comparte tus Fotos
+                </h3>
+                <span class="card-icon"
+                  ><span class="material-symbols-outlined"
+                    >photo_camera</span
+                  ></span
+                >
+              </div>
+              <div class="card-divider"></div>
+              <div class="info-list">
+                <div class="info-row">
+                  <span class="info-icon"
+                    ><span class="material-symbols-outlined">image</span></span
+                  >
+                  <div>
+                    <p class="info-sub">
+                      Comparte los momentos que capturaste durante nuestra
+                      celebración. Máx. 5 MB por foto (JPG, PNG, WEBP, GIF).
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <form
+                id="photo-upload-form"
+                class="upload-form-inner"
+                novalidate=""
+              >
+                <!-- Nombre y Código -->
+                <div class="row rsvp-form-row">
+                  <div class="col-6">
+                    <div class="form-input-group">
+                      <span class="material-symbols-outlined">person</span>
+                      <input
+                        type="text"
+                        id="guest-name"
+                        placeholder="Nombre"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-input-group">
+                      <span class="material-symbols-outlined">key</span>
+                      <input
+                        type="text"
+                        id="gallery-group-code"
+                        placeholder="Código"
+                        autocomplete="off"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- Selector de archivos -->
+                <div class="row rsvp-form-row">
+                  <div class="col-md-12">
+                    <label for="photo-file" class="file-upload-label">
+                      <span class="material-symbols-outlined"
+                        >add_photo_alternate</span
+                      >
+                      Seleccionar foto(s)
+                      <input
+                        type="file"
+                        id="photo-file"
+                        accept="image/*"
+                        multiple=""
+                      />
+                    </label>
+                    <p class="file-info" id="file-info">
+                      Ningún archivo seleccionado
+                    </p>
+                  </div>
+                </div>
+                <div id="upload-alert" role="alert" aria-live="polite"></div>
+                <div class="card-actions upload-card-actions">
+                  <button type="submit" class="upload-submit-btn">
+                    <span class="material-symbols-outlined">upload</span> Subir
+                    Fotos
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Photo lightbox -->
@@ -1632,32 +1662,27 @@
       </div>
     </div>
 
-
     <!-- Modal Paleta de Colores -->
-<div id="palette-modal" class="palette-modal" aria-hidden="true">
+    <div id="palette-modal" class="palette-modal" aria-hidden="true">
+      <div class="palette-modal-overlay"></div>
 
-  <div class="palette-modal-overlay"></div>
+      <div class="palette-modal-content" role="dialog" aria-modal="true">
+        <button
+          id="close-palette"
+          type="button"
+          class="palette-modal-close"
+          aria-label="Cerrar"
+        >
+          ×
+        </button>
 
-  <div class="palette-modal-content" role="dialog" aria-modal="true">
-
-    <button
-      id="close-palette"
-      type="button"
-      class="palette-modal-close"
-      aria-label="Cerrar"
-    >
-      ×
-    </button>
-
-    <img
-      src="images/ChatGPT Image 29 ago 2026, 00_14_45.png"
-      alt="Paleta de colores Boda A&B"
-      class="palette-modal-image"
-    />
-
-  </div>
-
-</div>
+        <img
+          src="images/ChatGPT Image 29 ago 2026, 00_14_45.png"
+          alt="Paleta de colores Boda A&B"
+          class="palette-modal-image"
+        />
+      </div>
+    </div>
 
     <script src="js/scripts.js"></script>
 
