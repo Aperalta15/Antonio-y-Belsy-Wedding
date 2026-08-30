@@ -1,4 +1,4 @@
-﻿/* ============================================
+/* ============================================
    WEDDING WEBSITE - MAIN SCRIPTS
    ============================================ */
 
@@ -360,13 +360,14 @@ async function loadInfo(code) {
       input.focus();
       throw new Error("Código inválido");
     }
-    if (typeof startMusicAfterEnvelope === "function") {
-      startMusicAfterEnvelope();
-    }
+    
     const data = await response.json();
     renderCompanions(data.invitation.companions);
     updateConfirmationState(data.invitation.confirmed);
     cargarInvitados(data);
+    if (typeof startMusicAfterEnvelope === "function") {
+      startMusicAfterEnvelope();
+    }
     // Guardar el código en la URL
     const url = new URL(window.location);
     url.searchParams.set("code", code);
