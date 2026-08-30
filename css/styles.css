@@ -60,7 +60,7 @@ html {
 
 body {
     font-family: 'Manrope', sans-serif;
-    color: #4a4a4a;
+    color: 999;
     line-height: 1.6;
     font-weight: 400;
     padding-bottom: 72px; /* height of the fixed music player bar */
@@ -89,7 +89,7 @@ a:hover {
 p {
     font-size: 15px;
     line-height: 1.8;
-    color: #555;
+    color: #999;
 }
 
 /* ============================================
@@ -1070,15 +1070,15 @@ section.section-padding:not(#rsvp)::after {
     text-align: center;
 }
 .bloque-grupo-invitados .titulo-grupo {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
     font-size: 36px;
     font-family: 'Crimson Pro', serif;
     color: #657059;
-    font-weight: 400;
+    font-weight: 400; 
 }
 .bloque-grupo-invitados .acompanantes-info {
     margin-top: 6px;
-    font-size: 17px;
+    font-size: 15px;
     color: #657059;
 }
 .bloque-grupo-invitados .lista-invitados {
@@ -1089,7 +1089,7 @@ section.section-padding:not(#rsvp)::after {
 }
 .bloque-grupo-invitados .invitado-item {
     display: block;
-    font-size: 17px;
+    font-size: 15px;
     padding: 6px 10px;
     border-radius: 6px;
     background: rgb(101 112 89 / 77%);
@@ -1161,13 +1161,13 @@ section.section-padding:not(#rsvp)::after {
     margin: 6px auto;
     width: fit-content;
     font-family: 'Manrope', sans-serif;
-    color: #555;
+    color: #999;
 }
 .bloque-grupo-invitados .mensaje-grupo{
     margin: 0 0 10px 0;
-    color: #666666;
+    color: #999;
     font-family: 'Manrope', sans-serif;
-    font-size: 17px;
+    font-size: 15px;
     margin-top: 25px;
 }
 
@@ -1219,7 +1219,7 @@ section.section-padding:not(#rsvp)::after {
 #intro p {
     text-align: center;
     line-height: 1.8;
-    color: #555;
+    color: #999;
 }
 
 #intro img {
@@ -1319,12 +1319,14 @@ section.section-padding:not(#rsvp)::after {
 }
 
 .story-paragraphs p {
-    color: #3f4a3b;                        /* text-on-surface-variant */
-    font-size: 18px;                       /* text-lg */
+    color: rgba(255, 255, 255, 0.6);                       /* text-on-surface-variant */
+    font-size: 15px;                      /* text-lg */
     line-height: 1.625;                    /* leading-relaxed */
     font-family: 'Manrope', sans-serif;    /* font-body */
     font-weight: 400;
     text-align: left !important;
+
+
 }
 
 /* Gold Divider */
@@ -1399,9 +1401,6 @@ section.section-padding:not(#rsvp)::after {
         font-size: 30px;
     }
 
-    .story-paragraphs p {
-        font-size: 16px;
-    }
 
     .story-families {
         grid-template-columns: 1fr;
@@ -1622,7 +1621,7 @@ section.section-padding:not(#rsvp)::after {
 .info-label {
     font-size: 13px;
     font-weight: 600;
-    color: #4a4a4a;
+    color: 999;
     margin: 0 0 2px;
     line-height: 1.4;
 }
@@ -1637,6 +1636,10 @@ section.section-padding:not(#rsvp)::after {
 
 .info-sub-asis{
     color: #999;
+}
+
+.info-sub strong {
+    font-weight: 700;
 }
 
 .companion-input-group {
@@ -2756,7 +2759,6 @@ button.gallery-item {
   padding: 25px;
   margin-top: 20px;
   background: transparent;
-  border: 1px solid rgba(212, 175, 55, 0.75);
   color: #657059;
   text-align: center;
 }
@@ -4924,5 +4926,198 @@ footer p {
         height: 30px;
 
         font-size: 22px;
+    }
+}
+
+/* ── Confirmation Modal ───────────────────────────────────── */
+
+.confirmation-modal-content {
+    width: min(92vw, 460px);
+    margin: auto;
+    padding: 0;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+/* ── Tarjeta ──────────────────────────────────────────────── */
+
+.confirmation-modal-card {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2.5rem 2rem;
+    background: #ffffff;
+    border: 1px solid rgba(212, 175, 55, 0.75);
+    color: #657059;
+    overflow: hidden;
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Marco interior */
+
+.confirmation-modal-card::before {
+    content: '';
+
+    position: absolute;
+
+    inset: 5px;
+
+    border: 1px solid rgba(212, 175, 55, 0.4);
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* ── Contenido ────────────────────────────────────────────── */
+
+.confirmation-card-body {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* ── Encabezado ───────────────────────────────────────────── */
+
+.confirmation-header {
+    text-align: center;
+}
+
+
+.confirmation-title {
+    margin: 0;
+
+    font-family: 'Crimson Pro', serif;
+
+    font-size: 1.7rem;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    color: #657059;
+}
+
+
+.confirmation-header p{
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 440px;
+    margin: 0 auto;}
+
+
+/* ── Información ──────────────────────────────────────────── */
+
+.confirmation-info {
+    text-align: center;
+}
+
+
+
+
+
+/* ── Lista de información ───────────────────────────────── */
+
+.confirmation-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+}
+
+
+.confirmation-list li {
+    position: relative;
+
+    margin-bottom: 0.7rem;
+
+    padding-left: 1.1rem;
+}
+
+
+/* Pequeño detalle dorado */
+
+.confirmation-list li::before {
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+    top: 0.65em;
+
+    width: 4px;
+    height: 4px;
+
+    background: #bea880;
+
+    transform: rotate(45deg);
+}
+
+
+/* Quitar espacio del último elemento */
+
+.confirmation-list li:last-child {
+    margin-bottom: 0;
+}
+/* ── Mensaje final ────────────────────────────────────────── */
+
+.confirmation-message {
+    margin: 1.5rem 0 0;
+
+    padding-top: 1rem;
+
+    border-top: 1px solid rgba(212, 188, 141, 0.45);
+
+    font-family: 'Crimson Pro', serif;
+
+    font-size: 1.15rem;
+
+    font-style: italic;
+
+    line-height: 1.4;
+
+    text-align: center;
+
+    color: #657059;
+}
+
+
+/* ── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+
+    .confirmation-modal-content {
+        width: calc(100vw - 30px);
+    }
+
+    .confirmation-modal-card {
+        padding: 2.2rem 1.5rem;
+    }
+
+    .confirmation-title {
+        font-size: 1.5rem;
+    }
+
+    .confirmation-list {
+        font-size: 11px;
+
+        line-height: 1.65;
+    }
+
+    .confirmation-message {
+        font-size: 1.05rem;
     }
 }
