@@ -4223,7 +4223,7 @@ footer p {
 
 @media screen and (max-width: 768px) {
     header {
-        padding: 30px 0;
+        padding: 15px 0;
         width: 100%;
         margin: 0;
     }
@@ -4718,6 +4718,19 @@ footer p {
         flex-direction: column;
     }
 
+}
+
+.info-sub svg {
+  display: inline-block;
+  vertical-align: -3px;
+  margin: 0 3px;
+  cursor: pointer;
+  transform: scale(1.4);
+  transition: transform 0.3s ease;
+}
+
+.info-sub svg.selected {
+  transform: scale(1.8);
 }
 
 /* ── Botón Paleta de Colores ─────────────────────────────── */

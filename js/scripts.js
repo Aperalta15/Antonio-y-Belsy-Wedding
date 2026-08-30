@@ -123,6 +123,22 @@ var _rsvpStore = (function () {
   };
 })();
 
+document.querySelectorAll('.info-sub svg').forEach(svg => {
+  svg.addEventListener('click', () => {
+    const isSelected = svg.classList.contains('selected');
+
+    // Quitar selección de todos
+    document.querySelectorAll('.info-sub svg').forEach(item => {
+      item.classList.remove('selected');
+    });
+
+    // Si no estaba seleccionado, seleccionarlo
+    if (!isSelected) {
+      svg.classList.add('selected');
+    }
+  });
+});
+
 const formCode = document.getElementById("code-upload-form");
 const input = document.getElementById("validate-group-code");
 const inputGroup = input.closest(".form-input-group");
@@ -541,7 +557,7 @@ function _showGuestSkeleton(count) {
         // Collapse header padding and hide the decorative keyline (header::after)
         if (headerEl) {
           headerEl.classList.add("scrolled");
-          headerEl.style.padding = "35px 0";
+          headerEl.style.padding = "20px 0";
         }
       } else {
         if (navigationEl) navigationEl.classList.remove("fixed");
