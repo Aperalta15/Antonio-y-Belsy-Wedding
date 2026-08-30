@@ -4720,18 +4720,6 @@ footer p {
 
 }
 
-.info-sub svg {
-  display: inline-block;
-  vertical-align: -3px;
-  margin: 0 3px;
-  cursor: pointer;
-  transform: scale(1.4);
-  transition: transform 0.3s ease;
-}
-
-.info-sub svg.selected {
-  transform: scale(1.8);
-}
 
 /* ── Botón Paleta de Colores ─────────────────────────────── */
 
