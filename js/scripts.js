@@ -312,6 +312,23 @@ function renderCompanions(companions) {
   }
 }
 
+// Attempts to start music after the envelope animation completes.
+function startMusicAfterEnvelope() {
+  if (!audioPlayer || playlist.length === 0) return;
+
+  if (!audioPlayer.src || audioPlayer.src === window.location.href) {
+    audioPlayer.src = playlist[currentTrackIndex].src;
+  }
+
+  var playPromise = audioPlayer.play();
+  if (playPromise && typeof playPromise.catch === "function") {
+    playPromise.catch(function () {
+      syncPlayPauseUI();
+    });
+  }
+  syncPlayPauseUI();
+}
+
 async function loadInfo(code) {
   const input = document.getElementById("validate-group-code");
 
@@ -327,7 +344,9 @@ async function loadInfo(code) {
       input.focus();
       throw new Error("Código inválido");
     }
-
+    if (typeof startMusicAfterEnvelope === "function") {
+      startMusicAfterEnvelope();
+    }
     const data = await response.json();
     renderCompanions(data.invitation.companions);
     updateConfirmationState(data.invitation.confirmed);
@@ -335,7 +354,6 @@ async function loadInfo(code) {
     // Guardar el código en la URL
     const url = new URL(window.location);
     url.searchParams.set("code", code);
-    console.log(code);
     history.replaceState({}, "", url);
     closeUploadModal();
   } catch (error) {
@@ -1778,7 +1796,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
 
 // Playlist - add your MP3 files here
 const playlist = [
-   {
+  {
     title: "Amor a la Antigua",
     artist: "Mia Salinas",
     src: "mp3/Mia Salinas - Amor a la Antigua.mp3",
@@ -1788,7 +1806,7 @@ const playlist = [
     artist: "Carín León",
     src: "mp3/Carín León - Desde Que te Tengo.mp3",
   },
-  
+
   {
     title: "Que Suerte Tenerte",
     artist: "Fonseca",
@@ -1804,7 +1822,7 @@ const playlist = [
     artist: "Carlos Vives",
     src: "mp3/Carlos Vives - Ella Es Mi Fiesta Letra [itvZrAc3sRo].mp3",
   },
-  
+
   {
     title: "SI ES AMOR",
     artist: "Danny Ocean x Beele",
@@ -1819,7 +1837,7 @@ const playlist = [
     title: "Lo Tienes Todo",
     artist: "Julión Álvarez",
     src: "mp3/Julión Álvarez y su Norteño Banda - Lo Tienes Todo (Video Lyric).mp3",
-  }
+  },
 ];
 
 let currentTrackIndex = 0;
@@ -1997,23 +2015,6 @@ if (nextBtn) {
 if (playlist.length > 0) {
   loadTrack(currentTrackIndex);
   audioPlayer.volume = 0.8;
-}
-
-// Attempts to start music after the envelope animation completes.
-function startMusicAfterEnvelope() {
-  if (!audioPlayer || playlist.length === 0) return;
-
-  if (!audioPlayer.src || audioPlayer.src === window.location.href) {
-    audioPlayer.src = playlist[currentTrackIndex].src;
-  }
-
-  var playPromise = audioPlayer.play();
-  if (playPromise && typeof playPromise.catch === "function") {
-    playPromise.catch(function () {
-      syncPlayPauseUI();
-    });
-  }
-  syncPlayPauseUI();
 }
 
 // ============================================
@@ -2501,15 +2502,6 @@ function setLoading(loading) {
 // DOMContentLoaded – consolidated post-parse setup
 // ============================================
 document.addEventListener("DOMContentLoaded", function () {
-  const params = new URLSearchParams(window.location.search);
-  const code = params.get("code");
-  console.log(code);
-  if (!code) {
-    openCodeModal();
-  } else {
-    loadInfo(code);
-  }
-
   // 2. Close RSVP modal when clicking the backdrop
   var rsvpModal = document.getElementById("rsvp-modal");
   if (rsvpModal) {
@@ -2556,49 +2548,51 @@ function openInvitation() {
       overlay.style.visibility = "hidden";
       overlay.style.display = "none";
       document.body.classList.remove("envelope-visible");
-
-      if (typeof startMusicAfterEnvelope === "function") {
-        startMusicAfterEnvelope();
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get("code");
+      if (!code) {
+        openCodeModal();
+      } else {
+        loadInfo(code);
       }
-    }, 1800);
+    }, 300);
   }, 1200);
 }
 
+function openPaletteModal() {
+  const modal = document.getElementById("palette-modal");
 
-  function openPaletteModal() {
-    const modal = document.getElementById('palette-modal');
+  modal.classList.add("active");
+  modal.setAttribute("aria-hidden", "false");
 
-    modal.classList.add('active');
-    modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = "hidden";
+}
 
-    document.body.style.overflow = 'hidden';
+function closePaletteModal() {
+  const modal = document.getElementById("palette-modal");
+
+  modal.classList.remove("active");
+  modal.setAttribute("aria-hidden", "true");
+
+  document.body.style.overflow = "";
+}
+
+// Cerrar con la tecla ESC
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closePaletteModal();
   }
+});
 
-  function closePaletteModal() {
-    const modal = document.getElementById('palette-modal');
-
-    modal.classList.remove('active');
-    modal.setAttribute('aria-hidden', 'true');
-
-    document.body.style.overflow = '';
-  }
-
-  // Cerrar con la tecla ESC
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-      closePaletteModal();
-    }
+var paletteBtn = document.getElementById("palette-btn");
+if (paletteBtn) {
+  paletteBtn.addEventListener("click", function () {
+    openPaletteModal();
   });
-
-  var paletteBtn = document.getElementById("palette-btn");
-  if (paletteBtn) {
-    paletteBtn.addEventListener("click", function () {
-      openPaletteModal()
-    });
-  }
-    var closePalette = document.getElementById("close-palette");
-  if (closePalette) {
-    closePalette.addEventListener("click", function () {
-      closePaletteModal()
-    });
-  }
+}
+var closePalette = document.getElementById("close-palette");
+if (closePalette) {
+  closePalette.addEventListener("click", function () {
+    closePaletteModal();
+  });
+}
